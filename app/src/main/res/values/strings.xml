@@ -1,0 +1,969 @@
+<resources>
+    <string name="app_name">Shokusin2</string>
+    <string name="title_activity_seat_decide">SeatDecideActivity</string>
+    <array name="menuname">
+        <item>@array/_1ban</item>
+        <item>@array/_2ban</item>
+        <item>@array/_3ban</item>
+        <item>@array/_4ban</item>
+        <item>@array/_5ban</item>
+        <item>@array/_6ban</item>
+        <item>@array/_7ban</item>
+        <item>@array/_8ban</item>
+        <item>@array/_9ban</item>
+        <item>@array/_10ban</item>
+        <item>@array/a</item>
+        <item>@array/b</item>
+        <item>@array/c</item>
+        <item>@array/d</item>
+        <item>@array/e</item>
+        <item>@array/getu11</item>
+        <item>@array/getu12</item>
+        <item>@array/getu13</item>
+        <item>@array/getu14</item>
+        <item>@array/ka11</item>
+        <item>@array/ka12</item>
+        <item>@array/ka13</item>
+        <item>@array/ka14</item>
+        <item>@array/sui11</item>
+        <item>@array/sui12</item>
+        <item>@array/sui13</item>
+        <item>@array/sui14</item>
+        <item>@array/moku11</item>
+        <item>@array/moku12</item>
+        <item>@array/moku13</item>
+        <item>@array/moku14</item>
+        <item>@array/kin11</item>
+        <item>@array/kin12</item>
+        <item>@array/kin13</item>
+        <item>@array/kin14</item>
+        <item>@array/do11</item>
+        <item>@array/do12</item>
+        <item>@array/do13</item>
+        <item>@array/do14</item>
+        <item>@array/niti11</item>
+        <item>@array/niti12</item>
+        <item>@array/niti13</item>
+        <item>@array/niti14</item>
+        <item>@array/g1</item>
+        <item>@array/g2</item>
+        <item>@array/g3</item>
+        <item>@array/g4</item>
+        <item>@array/g5</item>
+        <item>@array/g6</item>
+        <item>@array/g7</item>
+        <item>@array/g8</item>
+        <item>@array/g9</item>
+        <item>@array/g10</item>
+        <item>@array/g11</item>
+        <item>@array/g12</item>
+        <item>@array/g13</item>
+        <item>@array/g14</item>
+        <item>@array/g15</item>
+        <item>@array/g16</item>
+        <item>@array/s1</item>
+        <item>@array/s2</item>
+        <item>@array/s3</item>
+        <item>@array/s4</item>
+        <item>@array/s5</item>
+        <item>@array/s6</item>
+    </array>
+    <string-array name="commonopt">
+        <item>大盛り</item>
+        <item>ハーフ</item>
+        <item>ご飯付き</item>
+        <item>甘口</item>
+        <item>小辛</item>
+        <item>中辛</item>
+        <item>辛口</item>
+    </string-array>
+    <string name="__1ban">1番</string>
+    <string-array name="_1ban">
+        <item>麻婆豆腐</item>
+        <item>1番</item>
+        <item>590</item>
+        <item>1</item>
+        <item>1,100,10</item>
+        <item>2,200,20</item>
+        <item>3,100,30</item>
+        <item>4,100,40</item>
+        <item>5,1,50</item>
+    </string-array>
+    <string-array name="_2ban">
+        <item>豆腐のうま煮</item>
+        <item>2番</item>
+        <item>590</item>
+        <item>1</item>
+        <item>卵</item>
+        <item>味濃いめ</item>
+    </string-array>
+    <string-array name="_3ban">
+        <item>肉野菜炒め</item>
+        <item>3番</item>
+        <item>590</item>
+        <item>1</item>
+        <item>卵</item>
+        <item>卵</item>
+
+    </string-array>
+    <string-array name="_4ban">
+        <item>豚肉とザーサイの細切り炒め</item>
+        <item>4番</item>
+        <item>590</item>
+        <item>1</item>
+        <item>卵</item>
+        <item>卵</item>
+
+    </string-array>
+
+    <string-array name="_5ban">
+        <item>麻婆春雨</item>
+        <item>5番</item>
+        <item>590</item>
+        <item>1</item>
+        <item>卵</item>
+        <item>卵</item>
+    </string-array>
+
+    <string-array name="_6ban">
+        <item>かに玉子</item>
+        <item>6番</item>
+        <item>590</item>
+        <item>1</item>
+
+    </string-array>
+
+    <string-array name="_7ban">
+        <item>ニラ玉子</item>
+        <item>7番</item>
+        <item>590</item>
+        <item>1</item>
+
+    </string-array>
+
+    <string-array name="_8ban">
+        <item>玉ねぎと玉子炒め</item>
+        <item>8番</item>
+        <item>590</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="_9ban">
+        <item>9番週替わり定食</item>
+        <item>9番</item>
+        <item>590</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="_10ban">
+        <item>15番週替わり定食</item>
+        <item>15番</item>
+        <item>720</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="a">
+        <item>ラーメンと半炒飯</item>
+        <item>Aセット</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="b">
+        <item>炒飯と焼き餃子</item>
+        <item>Bセット</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="c">
+        <item>ラーメンと焼き餃子</item>
+        <item>Cセット</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="d">
+        <item>野菜湯麺と焼き餃子</item>
+        <item>Dセット</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="e">
+        <item>四川担々麺と半炒飯</item>
+        <item>Eセット</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="getu11">
+        <item>豚肉と玉ねぎの生姜焼き</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="getu12">
+        <item>揚げ豆腐と肉野菜炒め</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="getu13">
+        <item>鶏肉と黒コショー炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="getu14">
+        <item>豚肉の角煮かけご飯</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="ka11">
+        <item>牛肉とニンニクの芽の細切り炒め</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="ka12">
+        <item>四川風豚肉スライス炒め</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="ka13">
+        <item>豚肉と野菜と玉子炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="ka14">
+        <item>四川風なす炒め</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="sui11">
+        <item>まめいかともやしのピリ辛炒め</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="sui12">
+        <item>すぶた</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="sui13">
+        <item>牛肉と玉ねぎの黒コショー炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="sui14">
+        <item>木くらげと豚肉と玉子炒め</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="moku11">
+        <item>鶏肉のピリ辛炒め</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="moku12">
+        <item>エビと玉子のチリソース</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="moku13">
+        <item>豚肉と太春雨炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="moku14">
+        <item>豚肉と野菜の生姜焼き</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="kin11">
+        <item>豚肉とピーマンの細切り炒め</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="kin12">
+        <item>鶏肉のチリソース</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="kin13">
+        <item>三品海鮮炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="kin14">
+        <item>牛肉のオイスターソース炒め</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="do11">
+        <item>麻婆なす</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="do12">
+        <item>鶏肉の唐辛子炒め</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="do13">
+        <item>ニラレバ炒め</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="do14">
+        <item>海老と玉子炒め</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="niti11">
+        <item>鶏肉の中国みそ炒め</item>
+        <item>11番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="niti12">
+        <item>白身魚の四川風炒め</item>
+        <item>12番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="niti13">
+        <item>八宝菜</item>
+        <item>13番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="niti14">
+        <item>豚肉とキャベツの辛みそ炒め</item>
+        <item>14番</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g1">
+        <item>食神炒飯</item>
+        <item>食神炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="g2">
+        <item>ニンニク入り炒飯</item>
+        <item>にんにく炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="g3">
+        <item>四川風辛み炒飯</item>
+        <item>四川炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="g4">
+        <item>高菜炒飯</item>
+        <item>高菜炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="g5">
+        <item>カニ炒飯</item>
+        <item>カニ炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g6">
+        <item>海老炒飯</item>
+        <item>海老炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g7">
+        <item>五目炒飯</item>
+        <item>五目炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g8">
+        <item>豚バラ肉入り炒飯</item>
+        <item>豚バラ炒飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g9">
+        <item>豚肉角煮かけご飯</item>
+        <item>豚肉角煮かけご飯</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g10">
+        <item>天津飯(醤油味)</item>
+        <item>天津飯醤油</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g11">
+        <item>天津飯(ケチャプ味)</item>
+        <item>天津飯ケチャプ</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g12">
+        <item>中華丼</item>
+        <item>中華丼</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g13">
+        <item>海鮮丼</item>
+        <item>海鮮丼</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="g14">
+        <item>海老チリ丼</item>
+        <item>海老チリ丼</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g15">
+        <item>麻婆豆腐丼</item>
+        <item>麻婆豆腐丼</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="g16">
+        <item>麻婆茄子丼</item>
+        <item>麻婆茄子丼</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s1">
+        <item>青菜豆腐スープ</item>
+        <item>青菜豆腐スープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s2">
+        <item>青菜と玉子スープ</item>
+        <item>青菜と玉子スープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s3">
+        <item>コーンスープ</item>
+        <item>コーンスープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s4">
+        <item>酸辣スープ</item>
+        <item>酸辣スープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s5">
+        <item>豚レバとトマトスープ</item>
+        <item>豚レバトマトスープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="s6">
+        <item>フカヒレスープ</item>
+        <item>フカヒレスープ</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m1">
+        <item>野菜タンメン</item>
+        <item>野菜タンメン</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m2">
+        <item>四川担々麵</item>
+        <item>四川担々麵</item>
+        <item>650</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m3">
+        <item>ラーメン</item>
+        <item>ラーメン</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m4">
+        <item>五目そば</item>
+        <item>五目そば</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m5">
+        <item>みそラーメン</item>
+        <item>みそラーメン</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m6">
+        <item>麻婆豆腐麺</item>
+        <item>麻婆豆腐麺</item>
+        <item>550</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m7">
+        <item>食神そば</item>
+        <item>食神そば</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m8">
+        <item>海鮮麺</item>
+        <item>海鮮麺</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m9">
+        <item>海老そば</item>
+        <item>海老そば</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m10">
+        <item>四川ラーメン</item>
+        <item>四川ラーメン</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m11">
+        <item>高菜ラーメン</item>
+        <item>高菜ラーメン</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m12">
+        <item>酸辣麺</item>
+        <item>酸辣麺</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m13">
+        <item>天津麺</item>
+        <item>天津麺</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m14">
+        <item>牛肉そば</item>
+        <item>牛肉そば</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m15">
+        <item>チャーシュー麺</item>
+        <item>チャーシュー麺</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m16">
+        <item>海鮮焼きそば</item>
+        <item>海鮮焼きそば</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m17">
+        <item>四川風焼きそば</item>
+        <item>四川風焼きそば</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m18">
+        <item>五目焼きそば</item>
+        <item>五目焼きそば</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m19">
+        <item>上海辛み焼きそば</item>
+        <item>上海辛み焼きそば</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m20">
+        <item>堅焼きそば</item>
+        <item>堅焼きそば</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="m21">
+        <item>海鮮焼き米粉</item>
+        <item>海鮮焼き米粉</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t1">
+        <item>水餃子</item>
+        <item>水餃子</item>
+        <item>230</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t2">
+        <item>焼き餃子</item>
+        <item>焼き餃子</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t3">
+        <item>四川タレ水餃子</item>
+        <item>四川タレ水餃子</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t4">
+        <item>海老蒸し餃子</item>
+        <item>海老蒸し餃子</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t5">
+        <item>小籠包</item>
+        <item>小籠包</item>
+        <item>270</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t6">
+        <item>フカヒレ蒸し餃子</item>
+        <item>フカヒレ蒸し餃子</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t7">
+        <item>ごま団子</item>
+        <item>ごま団子</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t8">
+        <item>いか団子</item>
+        <item>いか団子</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="t9">
+        <item>春巻</item>
+        <item>春巻</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="k1">
+        <item>海老のチリソース</item>
+        <item>海老チリ</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k2">
+        <item>海老のマヨネーズ</item>
+        <item>海老マヨ</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k3">
+        <item>海老と卵炒め</item>
+        <item>海老と卵炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k4">
+        <item>海老とｶｯｼｭｰﾅｯﾂﾋﾟﾘ辛炒め</item>
+        <item>海老とｶｯｼｭｰﾅｯﾂﾋﾟﾘ辛炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k5">
+        <item>海老と袋茸炒め</item>
+        <item>海老と袋茸炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k6">
+        <item>三麺類海鮮炒め</item>
+        <item>三麺類海鮮炒め</item>
+        <item>980</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k7">
+        <item>ブロッコリとホタテ炒め</item>
+        <item>ブロッコリとホタテ炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k8">
+        <item>いかのピリ辛炒め</item>
+        <item>いかのピリ辛炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k9">
+        <item>いかの中国スパイス炒め</item>
+        <item>いかの中国スパイス炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k10">
+        <item>まめいかともやしのピリ辛炒め</item>
+        <item>まめいかともやしのピリ辛炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k11">
+        <item>海老のテンプラ</item>
+        <item>海老のテンプラ</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k12">
+        <item>海老と胡瓜炒め</item>
+        <item>海老と胡瓜炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k13">
+        <item>海鮮おこげ</item>
+        <item>海鮮おこげ</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k14">
+        <item>車エビのチリソース</item>
+        <item>車エビチリ</item>
+        <item>1380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k15">
+        <item>フカヒレの姿煮</item>
+        <item>フカヒレの姿煮</item>
+        <item>2800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="k16">
+        <item>アワビのオイスターソース炒め</item>
+        <item>アワビのオイスターソース炒め</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y1">
+        <item>麻婆なす</item>
+        <item>麻婆なす</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y2">
+        <item>四川風なす炒め</item>
+        <item>四川風なす炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y3">
+        <item>レタスとトマトと卵炒め</item>
+        <item>レタスとトマトと卵炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y4">
+        <item>ﾁﾝｹﾞﾝｻｲとﾆﾝﾆｸ炒め</item>
+        <item>ﾁﾝｹﾞﾝｻｲとﾆﾝﾆｸ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y5">
+        <item>椎茸とﾁﾝｹﾞﾝｻｲ炒め</item>
+        <item>椎茸とﾁﾝｹﾞﾝｻｲ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y6">
+        <item>ﾚﾀｽとｵｲｽﾀｰｿｰｽ炒め</item>
+        <item>ﾚﾀｽとｵｲｽﾀｰｿｰｽ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y7">
+        <item>麻婆豆腐</item>
+        <item>麻婆豆腐</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y8">
+        <item>揚げ豆腐と肉野菜炒め</item>
+        <item>揚げ豆腐と肉野菜炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y9">
+        <item>海鮮豆腐</item>
+        <item>海鮮豆腐</item>
+        <item>980</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y10">
+        <item>八宝菜</item>
+        <item>八宝菜</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y11">
+        <item>ﾁﾝｹﾞﾝｻｲの四川風炒め</item>
+        <item>ﾁﾝｹﾞﾝｻｲの四川風炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="y12">
+        <item>豚肉と白菜と黒酢炒め</item>
+        <item>豚肉と白菜と黒酢炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n1">
+        <item>牛肉のｵｲｽﾀｰｿｰｽ炒め</item>
+        <item>牛肉のｵｲｽﾀｰｿｰｽ炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n2">
+        <item>ﾆﾝﾆｸの芽と牛肉細切り炒め</item>
+        <item>ﾆﾝﾆｸの芽と牛肉細切り炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n3">
+        <item>牛肉と黒コショー炒め</item>
+        <item>牛肉と黒コショー炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n4">
+        <item>ラム肉の中国ｽﾊﾟｲｽ炒め</item>
+        <item>ラム肉の中国ｽﾊﾟｲｽ炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n5">
+        <item>豚肉とピーマンの細切り炒め</item>
+        <item>豚肉とピーマンの細切り炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n6">
+        <item>すぶた</item>
+        <item>すぶた</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n7">
+        <item>豚肉とｷｬﾍﾞﾂの辛みそ炒め</item>
+        <item>豚肉とｷｬﾍﾞﾂの辛みそ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n8">
+        <item>木クラゲと豚肉と玉子炒め</item>
+        <item>豚肉とカシューナッツ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n9">
+        <item>ニラレバ炒め</item>
+        <item>ニラレバ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n10">
+        <item>鶏肉のピリ辛炒め</item>
+        <item>鶏肉のピリ辛炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n11">
+        <item>豚肉とカシューナッツ炒め</item>
+        <item>豚肉とカシューナッツ炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n12">
+        <item>豚肉の唐辛子炒め</item>
+        <item>豚肉の唐辛子炒め</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n13">
+        <item>牛のアキレス醤油煮</item>
+        <item>牛のアキレス醤油煮</item>
+        <item>680</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n14">
+        <item>スペアリブの醤油煮</item>
+        <item>スペアリブの醤油煮</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n15">
+        <item>スペアリブの甘酢炒め</item>
+        <item>スペアリブの甘酢炒め</item>
+        <item>880</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n16">
+        <item>鶏軟骨塩ｺｼｮｰ炒め</item>
+        <item>鶏軟骨塩ｺｼｮｰ炒め</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="n17">
+        <item>水煮牛肉</item>
+        <item>水煮牛肉</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+
+</resources>
+
+<!--
+1 名称
+2 通称
+3 値段
+4 オプションの値段
+5-オプション
+  オプション名,weight,追加価格（省略可　初期値 1, 0yen
+-->
