@@ -30,15 +30,15 @@ public class MenuDeleteActivity extends AppCompatActivity {
         rootlayout.removeAllViews();
         linearLayouts.clear();
         for(int i = 0;i<orderDataHolder.size();++i) {
-            MenuDict menuDict=new MenuDict(getResources());
+            MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
             LinearLayout linearLayout = new LinearLayout(getApplication());
             linearLayouts.add(linearLayout);
             TextView textView1 = new TextView(getApplication());
-            textView1.setText(menuDict.menustr(orderDataHolder.get(i).menuid));
+            textView1.setText(menuDict.menustr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid));
             linearLayout.addView(textView1);
             for(int ii=0;ii<orderDataHolder.get(i).optnum();ii++) {
                 TextView textView2=new TextView(getApplication());
-                textView2.setText(menuDict.menuoptstr(orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii)));
+                textView2.setText(menuDict.menuoptstr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii)));
                 linearLayout.addView(textView2);
             }
             final Button button = new Button(getApplication());

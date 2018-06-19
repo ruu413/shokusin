@@ -1,5 +1,8 @@
 package e.ruu.shokusin2;
 
+import android.app.Activity;
+import android.content.res.Resources;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,6 +15,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
+        //MenuDict menuDict=new MenuDict(Resources.getSystem());
         assertEquals(4, 2 + 2);
     }
 }

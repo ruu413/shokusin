@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class OrderDataHolder implements Serializable{
     public ArrayList<OrderData> data=new ArrayList<OrderData>();
     public int seat = 0;
-    public void puts(int menuid,ArrayList<Integer>optionid){
-        data.add(new OrderData(menuid,optionid));
+    public void puts(int menugroupid,int menuid,ArrayList<Integer>optionid){
+        data.add(new OrderData(menugroupid,menuid,optionid));
     }
     public void puts(OrderData data_){
         data.add(data_);

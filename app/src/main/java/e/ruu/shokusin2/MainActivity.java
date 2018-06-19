@@ -13,9 +13,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MenuDict menuDict=new MenuDict(getResources());
+        MenuDict.createInstance(getResources());
+        MenuDict menuDict= MenuDict.getInstance();
         Button goMenuButton =findViewById(R.id.gomenubutton);
-        goMenuButton.setText(menuDict.menuoptvaluestr(0,0));
+        //goMenuButton.setText(menuDict.menuoptvaluestr(0,0));
         goMenuButton.setOnClickListener(new View.OnClickListener(){
 
             @Override

@@ -14,7 +14,7 @@ public class MenuConfirmActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MenuDict menuDict=new MenuDict(getResources());
+        MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
         setContentView(R.layout.activity_menuconfirm);
         //MenuDict menuDict=new MenuDict(getResources());
         String str="席";
@@ -26,17 +26,17 @@ public class MenuConfirmActivity extends AppCompatActivity {
         url+=menuDict.seatstr(orderDataHolder.seat);
         url+="%0D%0A";
         for(int i=0;i<orderDataHolder.size();i++){
-            str+=menuDict.menustr2(orderDataHolder.get(i).menuid);
+            str+=menuDict.menustr2(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid);
             str+=" ";
             for(int ii=0;ii<orderDataHolder.get(i).optionid.size();++ii) {
-                str += menuDict.menuoptstr(orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii));
+                str += menuDict.menuoptstr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii));
                 str += " ";
             }
             str += "\n";
-            url+=menuDict.menustr2(orderDataHolder.get(i).menuid);
+            url+=menuDict.menustr2(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid);
             url+=" ";
             for(int ii=0;ii<orderDataHolder.get(i).optionid.size();++ii) {
-                url += menuDict.menuoptstr(orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii));
+                url += menuDict.menuoptstr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii));
                 url += " ";
             }
             url+="%0D%0A";
