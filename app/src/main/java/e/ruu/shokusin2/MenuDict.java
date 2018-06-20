@@ -199,7 +199,7 @@ public class MenuDict{
             return 0;
         }
     }
-    /*
+    /*；
     0-9 commonoption
     10- array[4]-
     */
