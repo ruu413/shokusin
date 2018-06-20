@@ -12,13 +12,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MenuDict{
-    public ArrayList<TypedArray> typedArrays;// = new TypedArray<TypedArray>();//=getResources().obtainTypedArray(0);
-    public Resources res;
-    public String[] commonoptstr={"ハーフ,290","甘口,100,0,1","超甘,100,0,1","小辛,100,0,2","中辛,100,0,2","辛口,100,0,2","","","","","","",""};
+    private ArrayList<TypedArray> typedArrays;// = new TypedArray<TypedArray>();//=getResources().obtainTypedArray(0);
+    private Resources res;
+    private String[] commonoptstr={"甘口,100,0,1","超甘,100,0,1","小辛,100,0,2","中辛,100,0,2","辛口,100,0,2"};
     private static MenuDict instance;
     private MenuDict(Resources res){
         this.res=res;
-        typedArrays = new ArrayList<TypedArray>();
+        typedArrays = new ArrayList<>();
         TypedArray typedArray1=res.obtainTypedArray(R.array.menugroup);
         for(int i=0;i<typedArray1.length();++i) {
             typedArrays.add(res.obtainTypedArray(typedArray1.getResourceId(i, 0)));
@@ -32,9 +32,11 @@ public class MenuDict{
     public static void createInstance(Resources res){
         instance = new MenuDict(res);
     }
+    public int commonoptlen(){
+        return commonoptstr.length;
+    }
     public int menugrouplen() {
-        return 3;
-        //return typedArrays.size();
+        return typedArrays.size();
     }    /*
     public String menustr(int menuid) {
         return (String) typedArrays.get(0).getTextArray(menuid)[0];
@@ -147,7 +149,7 @@ public class MenuDict{
         if(menuoptid>=10){
             return ((String)typedArrays.get(menugroupid).getTextArray(menuid)[menuoptid+4-10]).split(",")[0];
         }else if(menuoptid>=0){
-            return (String)commonoptstr[menuoptid].split(",")[0];
+            return commonoptstr[menuoptid].split(",")[0];
         }else{
             return"";
         }
@@ -156,12 +158,12 @@ public class MenuDict{
         if(menuid>menulen(menugroupid))return"0";
         if(menuoptid-10>menuoptlen(menugroupid,menuid))return "0";
         if(menuoptid>=10){
-            String retstr="0";
-            try { retstr= ((String)typedArrays.get(menugroupid).getTextArray(menuid)[menuoptid+4-10]).split(",")[2];}catch (ArrayIndexOutOfBoundsException e){}
+            String retstr;
+            try { retstr= ((String)typedArrays.get(menugroupid).getTextArray(menuid)[menuoptid+4-10]).split(",")[2];}catch (ArrayIndexOutOfBoundsException e){return "0";}
             return retstr;
         }else if(menuoptid>=0){
-            String retstr="0";
-            try{retstr = (String)commonoptstr[menuoptid].split(",")[2];}catch (ArrayIndexOutOfBoundsException e){}
+            String retstr;
+            try{retstr = commonoptstr[menuoptid].split(",")[2];}catch (ArrayIndexOutOfBoundsException e){return "0";}
             return retstr;
         }else{
             return "0";
@@ -171,12 +173,12 @@ public class MenuDict{
         if(menuid>menulen(menugroupid))return 0;
         if(menuoptid-10>menuoptlen(menugroupid,menuid))return 0;
         if(menuoptid>=10){
-            String retstr="100";
+            String retstr;
             try { retstr= ((String)typedArrays.get(menugroupid).getTextArray(menuid)[menuoptid+4-10]).split(",")[1];}catch (ArrayIndexOutOfBoundsException e){return 100;}
             return Integer.parseInt(retstr);
         }else if(menuoptid>=0){
-            String retstr="100";
-            try{retstr = (String)commonoptstr[menuoptid].split(",")[1];}catch (ArrayIndexOutOfBoundsException e){return 100;}
+            String retstr;
+            try{retstr = commonoptstr[menuoptid].split(",")[1];}catch (ArrayIndexOutOfBoundsException e){return 100;}
             return Integer.parseInt(retstr);
         }else{
             return 100;
@@ -186,12 +188,12 @@ public class MenuDict{
         if(menuid>menulen(menugroupid))return 0;
         if(menuoptid-10>menuoptlen(menugroupid,menuid))return 0;
         if(menuoptid>=10){
-            String retstr="0";
+            String retstr;
             try { retstr= ((String)typedArrays.get(menugroupid).getTextArray(menuid)[menuoptid+4-10]).split(",")[3];}catch (ArrayIndexOutOfBoundsException e){return 0;}
             return Integer.parseInt(retstr);
         }else if(menuoptid>=0){
-            String retstr="0";
-            try{retstr = (String)commonoptstr[menuoptid].split(",")[3];}catch (ArrayIndexOutOfBoundsException e){return 0;}
+            String retstr;
+            try{retstr = commonoptstr[menuoptid].split(",")[3];}catch (ArrayIndexOutOfBoundsException e){return 0;}
             return Integer.parseInt(retstr);
         }else{
             return 0;
@@ -203,7 +205,7 @@ public class MenuDict{
     */
     public int menuoptlen(int menugroupid,int menuid){//オプションの数(普遍含まない)
         if(menuid>menulen(menugroupid))return 0;
-        return (int)typedArrays.get(menugroupid).getTextArray(menuid).length-4;
+        return typedArrays.get(menugroupid).getTextArray(menuid).length-4;
     }
 
 }

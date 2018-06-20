@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class OrderDataHolder implements Serializable{
-    public ArrayList<OrderData> data=new ArrayList<OrderData>();
+    public ArrayList<OrderData> data=new ArrayList<>();
     public int seat = 0;
     public void puts(int menugroupid,int menuid,ArrayList<Integer>optionid){
         data.add(new OrderData(menugroupid,menuid,optionid));

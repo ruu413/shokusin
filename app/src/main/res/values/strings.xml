@@ -3,11 +3,24 @@
     <string name="title_activity_seat_decide">SeatDecideActivity</string>
     <array name="spinnerstr">
         <item>全メニュー</item>
-        <item>590円定食/日替わり</item>
-        <item>サービス定食</item>
+        <item>590円定食/日・週替わり</item>
+        <item>サービスセット</item>
         <item>月曜定食</item>
         <item>火曜定食</item>
         <item>水曜定食</item>
+        <item>木曜定食</item>
+        <item>金曜定食</item>
+        <item>土曜定食</item>
+        <item>日曜定食</item>
+        <item>ご飯類</item>
+        <item>スープ類</item>
+        <item>麺類</item>
+        <item>点心類</item>
+        <item>海鮮類</item>
+        <item>野菜類</item>
+        <item>牛・豚・鶏・ラム</item>
+        <item>おつまみ</item>
+        <item>飲み物</item>
     </array>
     <array name="menugroup">
         <item>@array/menuname</item>
@@ -16,6 +29,19 @@
         <item>@array/getu</item>
         <item>@array/ka</item>
         <item>@array/sui</item>
+        <item>@array/moku</item>
+        <item>@array/kin</item>
+        <item>@array/doyo</item>
+        <item>@array/niti</item>
+        <item>@array/gohan_g</item>
+        <item>@array/soup_g</item>
+        <item>@array/men_g</item>
+        <item>@array/tensin_g</item>
+        <item>@array/kaisen_g</item>
+        <item>@array/yasai_g</item>
+        <item>@array/niku_g</item>
+        <item>@array/otumami_g</item>
+        <item>@array/nomimono_g</item>
     </array>
     <array name="menuname">
         <item>@array/_1ban</item>
@@ -28,6 +54,7 @@
         <item>@array/_8ban</item>
         <item>@array/_9ban</item>
         <item>@array/_15ban</item>
+        <item>@array/_osusume</item>
         <item>@array/a</item>
         <item>@array/b</item>
         <item>@array/c</item>
@@ -83,6 +110,114 @@
         <item>@array/s4</item>
         <item>@array/s5</item>
         <item>@array/s6</item>
+        <item>@array/m1</item>
+        <item>@array/m2</item>
+        <item>@array/m3</item>
+        <item>@array/m4</item>
+        <item>@array/m5</item>
+        <item>@array/m6</item>
+        <item>@array/m7</item>
+        <item>@array/m8</item>
+        <item>@array/m9</item>
+        <item>@array/m10</item>
+        <item>@array/m11</item>
+        <item>@array/m12</item>
+        <item>@array/m13</item>
+        <item>@array/m14</item>
+        <item>@array/m15</item>
+        <item>@array/m16</item>
+        <item>@array/m17</item>
+        <item>@array/m18</item>
+        <item>@array/m19</item>
+        <item>@array/m20</item>
+        <item>@array/m21</item>
+        <item>@array/t1</item>
+        <item>@array/t2</item>
+        <item>@array/t3</item>
+        <item>@array/t4</item>
+        <item>@array/t5</item>
+        <item>@array/t6</item>
+        <item>@array/t7</item>
+        <item>@array/t8</item>
+        <item>@array/t9</item>
+        <item>@array/k1</item>
+        <item>@array/k2</item>
+        <item>@array/k3</item>
+        <item>@array/k4</item>
+        <item>@array/k5</item>
+        <item>@array/k6</item>
+        <item>@array/k7</item>
+        <item>@array/k8</item>
+        <item>@array/k9</item>
+        <item>@array/k10</item>
+        <item>@array/k11</item>
+        <item>@array/k12</item>
+        <item>@array/k13</item>
+        <item>@array/k14</item>
+        <item>@array/k15</item>
+        <item>@array/k16</item>
+        <item>@array/y1</item>
+        <item>@array/y2</item>
+        <item>@array/y3</item>
+        <item>@array/y4</item>
+        <item>@array/y5</item>
+        <item>@array/y6</item>
+        <item>@array/y7</item>
+        <item>@array/y8</item>
+        <item>@array/y9</item>
+        <item>@array/y10</item>
+        <item>@array/y11</item>
+        <item>@array/y12</item>
+        <item>@array/n1</item>
+        <item>@array/n2</item>
+        <item>@array/n3</item>
+        <item>@array/n4</item>
+        <item>@array/n5</item>
+        <item>@array/n6</item>
+        <item>@array/n7</item>
+        <item>@array/n8</item>
+        <item>@array/n9</item>
+        <item>@array/n10</item>
+        <item>@array/n11</item>
+        <item>@array/n12</item>
+        <item>@array/n13</item>
+        <item>@array/n14</item>
+        <item>@array/n15</item>
+        <item>@array/n16</item>
+        <item>@array/n17</item>
+        <item>@array/o1</item>
+        <item>@array/o2</item>
+        <item>@array/o3</item>
+        <item>@array/o4</item>
+        <item>@array/o5</item>
+        <item>@array/o6</item>
+        <item>@array/o7</item>
+        <item>@array/o8</item>
+        <item>@array/o9</item>
+        <item>@array/o10</item>
+        <item>@array/o11</item>
+        <item>@array/o12</item>
+        <item>@array/no1</item>
+        <item>@array/no2</item>
+        <item>@array/no3</item>
+        <item>@array/no4</item>
+        <item>@array/no5</item>
+        <item>@array/no6</item>
+        <item>@array/no7</item>
+        <item>@array/no8</item>
+        <item>@array/no9</item>
+        <item>@array/no10</item>
+        <item>@array/no11</item>
+        <item>@array/no12</item>
+        <item>@array/no13</item>
+        <item>@array/no14</item>
+        <item>@array/no15</item>
+        <item>@array/no16</item>
+        <item>@array/no17</item>
+        <item>@array/no18</item>
+        <item>@array/no19</item>
+        <item>@array/no20</item>
+
     </array>
     <array name="teisyoku">
         <item>@array/_1ban</item>
@@ -95,6 +230,7 @@
         <item>@array/_8ban</item>
         <item>@array/_9ban</item>
         <item>@array/_15ban</item>
+        <item>@array/_osusume</item>
     </array>
     <array name="service">
         <item>@array/a</item>
@@ -121,302 +257,531 @@
         <item>@array/sui13</item>
         <item>@array/sui14</item>
     </array>
+    <string-array name="moku">
+        <item>@array/moku11</item>
+        <item>@array/moku12</item>
+        <item>@array/moku13</item>
+        <item>@array/moku14</item>
+    </string-array>
+    <string-array name="kin">
+        <item>@array/kin11</item>
+        <item>@array/kin12</item>
+        <item>@array/kin13</item>
+        <item>@array/kin14</item>
+    </string-array>
+    <string-array name="doyo">
+        <item>@array/do11</item>
+        <item>@array/do12</item>
+        <item>@array/do13</item>
+        <item>@array/do14</item>
+    </string-array>
+    <string-array name="niti">
+        <item>@array/niti11</item>
+        <item>@array/niti12</item>
+        <item>@array/niti13</item>
+        <item>@array/niti14</item>
+    </string-array>
+    <string-array name="gohan_g">
+        <item>@array/g1</item>
+        <item>@array/g2</item>
+        <item>@array/g3</item>
+        <item>@array/g4</item>
+        <item>@array/g5</item>
+        <item>@array/g6</item>
+        <item>@array/g7</item>
+        <item>@array/g8</item>
+        <item>@array/g9</item>
+        <item>@array/g10</item>
+        <item>@array/g11</item>
+        <item>@array/g12</item>
+        <item>@array/g13</item>
+        <item>@array/g14</item>
+        <item>@array/g15</item>
+        <item>@array/g16</item>
+    </string-array>
+    <string-array name="soup_g">
+        <item>@array/s1</item>
+        <item>@array/s2</item>
+        <item>@array/s3</item>
+        <item>@array/s4</item>
+        <item>@array/s5</item>
+        <item>@array/s6</item>
+    </string-array>
+    <string-array name="men_g">
+        <item>@array/m1</item>
+        <item>@array/m2</item>
+        <item>@array/m3</item>
+        <item>@array/m4</item>
+        <item>@array/m5</item>
+        <item>@array/m6</item>
+        <item>@array/m7</item>
+        <item>@array/m8</item>
+        <item>@array/m9</item>
+        <item>@array/m10</item>
+        <item>@array/m11</item>
+        <item>@array/m12</item>
+        <item>@array/m13</item>
+        <item>@array/m14</item>
+        <item>@array/m15</item>
+        <item>@array/m16</item>
+        <item>@array/m17</item>
+        <item>@array/m18</item>
+        <item>@array/m19</item>
+        <item>@array/m20</item>
+        <item>@array/m21</item>
+    </string-array>
+    <string-array name="tensin_g">
+        <item>@array/t1</item>
+        <item>@array/t2</item>
+        <item>@array/t3</item>
+        <item>@array/t4</item>
+        <item>@array/t5</item>
+        <item>@array/t6</item>
+        <item>@array/t7</item>
+        <item>@array/t8</item>
+        <item>@array/t9</item>
+    </string-array>
+    <string-array name="kaisen_g">
+        <item>@array/k1</item>
+        <item>@array/k2</item>
+        <item>@array/k3</item>
+        <item>@array/k4</item>
+        <item>@array/k5</item>
+        <item>@array/k6</item>
+        <item>@array/k7</item>
+        <item>@array/k8</item>
+        <item>@array/k9</item>
+        <item>@array/k10</item>
+        <item>@array/k11</item>
+        <item>@array/k12</item>
+        <item>@array/k13</item>
+        <item>@array/k14</item>
+        <item>@array/k15</item>
+        <item>@array/k16</item>
+    </string-array>
+    <string-array name="yasai_g">
+        <item>@array/y1</item>
+        <item>@array/y2</item>
+        <item>@array/y3</item>
+        <item>@array/y4</item>
+        <item>@array/y5</item>
+        <item>@array/y6</item>
+        <item>@array/y7</item>
+        <item>@array/y8</item>
+        <item>@array/y9</item>
+        <item>@array/y10</item>
+        <item>@array/y11</item>
+        <item>@array/y12</item>
+    </string-array>
+    <string-array name="niku_g">
+        <item>@array/n1</item>
+        <item>@array/n2</item>
+        <item>@array/n3</item>
+        <item>@array/n4</item>
+        <item>@array/n5</item>
+        <item>@array/n6</item>
+        <item>@array/n7</item>
+        <item>@array/n8</item>
+        <item>@array/n9</item>
+        <item>@array/n10</item>
+        <item>@array/n11</item>
+        <item>@array/n12</item>
+        <item>@array/n13</item>
+        <item>@array/n14</item>
+        <item>@array/n15</item>
+        <item>@array/n16</item>
+        <item>@array/n17</item>
+    </string-array>
+    <string-array name="otumami_g">
+        <item>@array/o1</item>
+        <item>@array/o2</item>
+        <item>@array/o3</item>
+        <item>@array/o4</item>
+        <item>@array/o5</item>
+        <item>@array/o6</item>
+        <item>@array/o7</item>
+        <item>@array/o8</item>
+        <item>@array/o9</item>
+        <item>@array/o10</item>
+        <item>@array/o11</item>
+        <item>@array/o12</item>
+    </string-array>
+    <string-array name="nomimono_g">
+        <item>@array/no1</item>
+        <item>@array/no2</item>
+        <item>@array/no3</item>
+        <item>@array/no4</item>
+        <item>@array/no5</item>
+        <item>@array/no6</item>
+        <item>@array/no7</item>
+        <item>@array/no8</item>
+        <item>@array/no9</item>
+        <item>@array/no10</item>
+        <item>@array/no11</item>
+        <item>@array/no12</item>
+        <item>@array/no13</item>
+        <item>@array/no14</item>
+        <item>@array/no15</item>
+        <item>@array/no16</item>
+        <item>@array/no17</item>
+        <item>@array/no18</item>
+        <item>@array/no19</item>
+        <item>@array/no20</item>
+
+    </string-array>
+
     <string-array name="commonopt">
-        <item>大盛り</item>
-        <item>ハーフ</item>
-        <item>ご飯付き</item>
         <item>甘口</item>
+        <item>超甘</item>
         <item>小辛</item>
         <item>中辛</item>
         <item>辛口</item>
     </string-array>
-    <string name="__1ban">1番</string>
     <string-array name="_1ban">
-        <item>麻婆豆腐</item>
+        <item>1番 麻婆豆腐</item>
         <item>1番</item>
         <item>590</item>
         <item>1</item>
-        <item>1,100,10</item>
-        <item>2,200,20</item>
-        <item>3,100,30</item>
-        <item>4,100,40</item>
-        <item>5,1,50</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>玉子</item>
+        <item>味濃いめ</item>
     </string-array>
     <string-array name="_2ban">
-        <item>豆腐のうま煮</item>
+        <item>2番 豆腐のうま煮</item>
         <item>2番</item>
         <item>590</item>
         <item>1</item>
-        <item>卵</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
         <item>味濃いめ</item>
+        <item>玉子</item>
     </string-array>
     <string-array name="_3ban">
-        <item>肉野菜炒め</item>
+        <item>3番 肉野菜炒め</item>
         <item>3番</item>
         <item>590</item>
         <item>1</item>
-        <item>卵</item>
-        <item>卵</item>
-
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
     </string-array>
     <string-array name="_4ban">
-        <item>豚肉とザーサイの細切り炒め</item>
+        <item>4番 豚肉とザーサイの細切り炒め</item>
         <item>4番</item>
         <item>590</item>
         <item>1</item>
-        <item>卵</item>
-        <item>卵</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
 
     </string-array>
 
     <string-array name="_5ban">
-        <item>麻婆春雨</item>
+        <item>5番 麻婆春雨</item>
         <item>5番</item>
         <item>590</item>
-        <item>1</item>
-        <item>卵</item>
-        <item>卵</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
     </string-array>
 
     <string-array name="_6ban">
-        <item>かに玉子</item>
+        <item>6番 かに玉子</item>
         <item>6番</item>
         <item>590</item>
         <item>1</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
 
     </string-array>
 
     <string-array name="_7ban">
-        <item>ニラ玉子</item>
+        <item>7番 ニラ玉子</item>
         <item>7番</item>
         <item>590</item>
         <item>1</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
 
     </string-array>
 
     <string-array name="_8ban">
-        <item>玉ねぎと玉子炒め</item>
+        <item>8番 玉ねぎと玉子炒め</item>
         <item>8番</item>
         <item>590</item>
         <item>1</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
     </string-array>
 
     <string-array name="_9ban">
-        <item>9番週替わり定食</item>
+        <item>9番 週替わり定食</item>
         <item>9番</item>
         <item>590</item>
         <item>1</item>
+        <item>ハーフ,290</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
     </string-array>
     <string-array name="_15ban">
-        <item>15番週替わり定食</item>
+        <item>15番 週替わり定食</item>
         <item>15番</item>
         <item>720</item>
         <item>1</item>
+        <item>ハーフ,290</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
+    </string-array>
+    <string-array name="_osusume">
+        <item>オススメ</item>
+        <item>オススメ</item>
+        <item>720</item>
+        <item>1</item>
+        <item>ハーフ,290,-100</item>
+        <item>具大盛り,1,150</item>
+        <item>ご飯大盛り,1,0</item>
+        <item>にんにく</item>
+        <item>山椒</item>
+        <item>味濃いめ</item>
     </string-array>
     <string-array name="a">
-        <item>ラーメンと半炒飯</item>
+        <item>A ラーメンと半炒飯</item>
         <item>Aセット</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="b">
-        <item>炒飯と焼き餃子</item>
+        <item>B 炒飯と焼き餃子</item>
         <item>Bセット</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="c">
-        <item>ラーメンと焼き餃子</item>
+        <item>C ラーメンと焼き餃子</item>
         <item>Cセット</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="d">
-        <item>野菜湯麺と焼き餃子</item>
+        <item>D 野菜湯麺と焼き餃子</item>
         <item>Dセット</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="e">
-        <item>四川担々麺と半炒飯</item>
+        <item>E 四川担々麺と半炒飯</item>
         <item>Eセット</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="getu11">
-        <item>豚肉と玉ねぎの生姜焼き</item>
+        <item>11番 豚肉と玉ねぎの生姜焼き</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="getu12">
-        <item>揚げ豆腐と肉野菜炒め</item>
+        <item>12番 揚げ豆腐と肉野菜炒め</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="getu13">
-        <item>鶏肉と黒コショー炒め</item>
+        <item>13番 鶏肉と黒コショー炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="getu14">
-        <item>豚肉の角煮かけご飯</item>
+        <item>14番 豚肉の角煮かけご飯</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="ka11">
-        <item>牛肉とニンニクの芽の細切り炒め</item>
+        <item>11番 牛肉とニンニクの芽の細切り炒め</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="ka12">
-        <item>四川風豚肉スライス炒め</item>
+        <item>12番 四川風豚肉スライス炒め</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="ka13">
-        <item>豚肉と野菜と玉子炒め</item>
+        <item>13番 豚肉と野菜と玉子炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="ka14">
-        <item>四川風なす炒め</item>
+        <item>14番 四川風なす炒め</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="sui11">
-        <item>まめいかともやしのピリ辛炒め</item>
+        <item>11番 まめいかともやしのピリ辛炒め</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="sui12">
-        <item>すぶた</item>
+        <item>12番 すぶた</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="sui13">
-        <item>牛肉と玉ねぎの黒コショー炒め</item>
+        <item>13番 牛肉と玉ねぎの黒コショー炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="sui14">
-        <item>木くらげと豚肉と玉子炒め</item>
+        <item>14番 木くらげと豚肉と玉子炒め</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="moku11">
-        <item>鶏肉のピリ辛炒め</item>
+        <item>11番 鶏肉のピリ辛炒め</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="moku12">
-        <item>エビと玉子のチリソース</item>
+        <item>12番 エビと玉子のチリソース</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="moku13">
-        <item>豚肉と太春雨炒め</item>
+        <item>13番 豚肉と太春雨炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="moku14">
-        <item>豚肉と野菜の生姜焼き</item>
+        <item>14番 豚肉と野菜の生姜焼き</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="kin11">
-        <item>豚肉とピーマンの細切り炒め</item>
+        <item>11番 豚肉とピーマンの細切り炒め</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="kin12">
-        <item>鶏肉のチリソース</item>
+        <item>12番 鶏肉のチリソース</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="kin13">
-        <item>三品海鮮炒め</item>
+        <item>13番 三品海鮮炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="kin14">
-        <item>牛肉のオイスターソース炒め</item>
+        <item>14番 牛肉のオイスターソース炒め</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="do11">
-        <item>麻婆なす</item>
+        <item>11番 麻婆なす</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="do12">
-        <item>鶏肉の唐辛子炒め</item>
+        <item>12番 鶏肉の唐辛子炒め</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="do13">
-        <item>ニラレバ炒め</item>
+        <item>13番 ニラレバ炒め</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="do14">
-        <item>海老と玉子炒め</item>
+        <item>14番 海老と玉子炒め</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
 
     <string-array name="niti11">
-        <item>鶏肉の中国みそ炒め</item>
+        <item>11番 鶏肉の中国みそ炒め</item>
         <item>11番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="niti12">
-        <item>白身魚の四川風炒め</item>
+        <item>12番 白身魚の四川風炒め</item>
         <item>12番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="niti13">
-        <item>八宝菜</item>
+        <item>13番 八宝菜</item>
         <item>13番</item>
         <item>700</item>
         <item>1</item>
     </string-array>
     <string-array name="niti14">
-        <item>豚肉とキャベツの辛みそ炒め</item>
+        <item>14番 豚肉とキャベツの辛みそ炒め</item>
         <item>14番</item>
         <item>700</item>
         <item>1</item>
@@ -1009,6 +1374,198 @@
         <item>780</item>
         <item>1</item>
     </string-array>
+    <string-array name="o1">
+        <item>ザーサイとねぎの和え物</item>
+        <item>ザーサイとねぎの和え物</item>
+        <item>200</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o2">
+        <item>メンマとねぎの和え物</item>
+        <item>メンマとねぎの和え物</item>
+        <item>200</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o3">
+        <item>ビータン</item>
+        <item>ビータン</item>
+        <item>350</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o4">
+        <item>ビータン豆腐</item>
+        <item>ビータン豆腐</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o5">
+        <item>クラゲサラダ</item>
+        <item>クラゲサラダ</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o6">
+        <item>牛アキレスの和え物</item>
+        <item>牛アキレスの和え物</item>
+        <item>580</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o7">
+        <item>バンバン鶏</item>
+        <item>棒棒鶏</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o8">
+        <item>太春雨サラダ</item>
+        <item>太春雨サラダ</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o9">
+        <item>三種類前菜</item>
+        <item>三種類前菜</item>
+        <item>980</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o10">
+        <item>腸詰</item>
+        <item>腸詰</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o11">
+        <item>きゅうりの前菜</item>
+        <item>きゅうりの前菜</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="o12">
+        <item>スナギモとキュウリの和え物</item>
+        <item>スナギモとキュウリの和え物</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no1">
+        <item>生ビール</item>
+        <item>生ビール</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no2">
+        <item>瓶ビール</item>
+        <item>瓶ビール</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no3">
+        <item>青島ビール</item>
+        <item>青島ビール</item>
+        <item>450</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no4">
+        <item>紹興酒（一合）</item>
+        <item>紹興酒（一合）</item>
+        <item>480</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no5">
+        <item>紹興酒（ボトル）</item>
+        <item>紹興酒（ボトル）</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no6">
+        <item>杏露酒（グラス）</item>
+        <item>杏露酒（グラス）</item>
+        <item>450</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no7">
+        <item>杏露酒（ボトル）</item>
+        <item>杏露酒（ボトル）</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no8">
+        <item>ライチ酒（グラス）</item>
+        <item>ライチ酒（グラス）</item>
+        <item>450</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no9">
+        <item>ライチ酒（ボトル）</item>
+        <item>ライチ酒（ボトル）</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no10">
+        <item>桂花陳酒（グラス）</item>
+        <item>桂花陳酒（グラス）</item>
+        <item>450</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no11">
+        <item>桂花陳酒（ボトル）</item>
+        <item>桂花陳酒（ボトル）</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no12">
+        <item>日本酒（小ボトル）</item>
+        <item>日本酒（小ボトル）</item>
+        <item>450</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no13">
+        <item>真露（ボトル）</item>
+        <item>真露（ボトル）</item>
+        <item>1800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no14">
+        <item>ウーロンハイ</item>
+        <item>ウーロンハイ</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no15">
+        <item>レモンハイ</item>
+        <item>レモンハイ</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no16">
+        <item>リンゴハイ</item>
+        <item>リンゴハイ</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no17">
+        <item>梅ハイ</item>
+        <item>梅ハイ</item>
+        <item>380</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no18">
+        <item>ウーロン茶</item>
+        <item>ウーロン茶</item>
+        <item>200</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no19">
+        <item>コカコーラ</item>
+        <item>コカコーラ</item>
+        <item>200</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="no20">
+        <item>オレンジジュース</item>
+        <item>オレンジジュース</item>
+        <item>200</item>
+        <item>1</item>
+    </string-array>
 
 </resources>
 
@@ -1016,7 +1573,7 @@
 1 名称
 2 通称
 3 値段
-4 オプションの値段
+4 未指定
 5-オプション
-  オプション名,weight,追加価格（省略可　初期値 1, 0yen
+  オプション名,weight,追加価格（省略可　初期値 100, 0　yen
 -->

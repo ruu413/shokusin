@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class
 MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//TODO menugroupidをどうにかする
-    public final ArrayList<ToggleButton> toggleButtons=new ArrayList<ToggleButton>();
+    public final ArrayList<ToggleButton> toggleButtons=new ArrayList<>();
     public ArrayList<Integer> buttonids=new ArrayList<>();
-    ArrayList<LinearLayout> linearLayouts=new ArrayList<LinearLayout>();
+    ArrayList<LinearLayout> linearLayouts=new ArrayList<>();
     ArrayList<Integer> groupflag=new ArrayList<>();
     int optweight=0;
     int menuid=0;
@@ -37,21 +37,20 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
         //TypedArray menuarray=getResources().obtainTypedArray(R.array.menuname);
         LinearLayout layout1=findViewById(R.id.layout1);
         {
-            toggleButtons.add((ToggleButton) findViewById(R.id.half));
             toggleButtons.add((ToggleButton) findViewById(R.id.amakuti));
             toggleButtons.add((ToggleButton) findViewById(R.id.tyoama));
             toggleButtons.add((ToggleButton) findViewById(R.id.syoukara));
             toggleButtons.add((ToggleButton) findViewById(R.id.tyuukara));
             toggleButtons.add((ToggleButton) findViewById(R.id.karakuti));
         }
-        int commonoptnum=6;
+        int commonoptnum=menuDict.commonoptlen();
         for(int i=0;i<commonoptnum;i++) {//commonopt
             toggleButtons.get(i).setText(menuDict.menuoptstr(menugroupid,menuid,i));
             toggleButtons.get(i).setTextOn(menuDict.menuoptstr(menugroupid,menuid,i));
             toggleButtons.get(i).setTextOff(menuDict.menuoptstr(menugroupid,menuid,i));
             buttonids.add(i);
             //buttons.get(i).setText("a");
-            final int finalI = i;
+            //final int finalI = i;
             //toggleButton.setOnCheckedChangeListener(this);
             toggleButtons.get(i).setOnClickListener(this);
         }
@@ -63,14 +62,11 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
             toggleButton.setText(menuDict.menuoptstr(menugroupid,menuid,i+10));
             toggleButton.setTextOn(menuDict.menuoptstr(menugroupid,menuid,i+10));
             toggleButton.setTextOff(menuDict.menuoptstr(menugroupid,menuid,i+10));
-            toggleButton.setId((int)(i+10));
-            toggleButton.setText(String.valueOf(i+10));
-            toggleButton.setTextOff(String.valueOf(i+10));
-            toggleButton.setTextOn(String.valueOf(i+10));
+            toggleButton.setId(i+10);
             //toggleButton.setTextOff(String.valueOf(menuDict.menuoptweight(menuid,i+10)));
 
             //buttons.get(i).setText("a");
-            final int finalI = i+10;
+            //final int finalI = i+10;
             toggleButton.setOnClickListener(this);
         }
         for(int i=0;i<=menuDict.menuoptlen(menugroupid,menuid)/3;i++){
@@ -107,9 +103,9 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
             @Override
             public void onClick(View v){
                 //setToggleButtons();
-                ArrayList<Integer> opt=new ArrayList<Integer>();
+                ArrayList<Integer> opt=new ArrayList<>();
                 for(int i=0;i<toggleButtons.size();i++){
-                    if(toggleButtons.get(i).isChecked()==true){
+                    if(toggleButtons.get(i).isChecked()){
                             opt.add(buttonids.get(i));
                     }
                 }
@@ -123,7 +119,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
     @Override
     public void onClick(View v){
         ToggleButton buttonView =(ToggleButton)v;
-        boolean isChecked =((ToggleButton)buttonView).isChecked();
+        boolean isChecked =buttonView.isChecked();
         int maxweight=290;
     //setToggleButtons();
         //buttonView.setChecked();
@@ -156,7 +152,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                     toggleButtons.get(ii).setText(String.valueOf(buttonids.get(ii)));
                 }*/
                 break;
-            };
+            }
         }
         for (int i=0;i<toggleButtons.size();++i){//追加できないメニューのボタンを使用不可に
             if(!toggleButtons.get(i).isChecked()){

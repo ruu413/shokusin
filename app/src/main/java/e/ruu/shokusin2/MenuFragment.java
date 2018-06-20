@@ -79,7 +79,7 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
         scrollView.addView(layout1);
         return scrollView;
     }
-
+    /*
     @Override
     public void onActivityResult(int reqCode,int resultCode,Intent intent){
         super.onActivityResult(reqCode, resultCode, intent);
@@ -93,5 +93,5 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
         //buttons.get(2).setText(String.valueOf(retorder.optionid[1]));
         ((MenuActivity)getActivity()).orderDataHolder.puts(retorder);
         ((MenuActivity)getActivity()).valueText.setText(String.valueOf(menuDict.getValue(((MenuActivity)getActivity()).orderDataHolder)));
-    }
+    }*/
 }

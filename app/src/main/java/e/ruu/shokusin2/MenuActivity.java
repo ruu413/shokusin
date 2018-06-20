@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 
 public class MenuActivity extends AppCompatActivity {
-    ArrayList<MenuButton> buttons=new ArrayList<MenuButton>();
-    ArrayList<LinearLayout> innerlayouts=new ArrayList<LinearLayout>();
+    ArrayList<MenuButton> buttons=new ArrayList<>();
+    ArrayList<LinearLayout> innerlayouts=new ArrayList<>();
     OrderDataHolder orderDataHolder=new OrderDataHolder();
     TextView valueText;
     MenuDict menuDict;

@@ -21,7 +21,7 @@ public class MenuDeleteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menudelete);
         //menuDict =new MenuDict(getResources());
-        rootlayout = (LinearLayout) findViewById(R.id.menudelete);
+        rootlayout = findViewById(R.id.menudelete);
         Intent intent = getIntent();
         orderDataHolder = (OrderDataHolder) intent.getSerializableExtra("orderdataholder");
         setButton();
