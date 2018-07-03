@@ -23,6 +23,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuopiton);
+        SetView.setActionbar(getApplication(),getSupportActionBar(),"オプション選択");
         //setToggleButtons();
         //setContentView(R.layout.activity_menuopiton);
         Button progressbutton=findViewById(R.id.button_ok);
@@ -31,58 +32,104 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
         //toggleButton.setOnCheckedChangeListener(this);
 
         menuid =intent.getIntExtra("menuid",0);
-        menugroupid=intent.getIntExtra("menugroupid",0);
-
         menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+        menugroupid=intent.getIntExtra("menugroupid",0);
+        if(menugroupid==0){//menugroupid==0(全メニュー)の時それぞれのメニューグループに振り分ける
+            if(menuid<menuDict.menulen(0)/2) {
+                for (int i = 1; i < menuDict.menugrouplen(); ++i) {
+                    for (int ii = 0; ii < menuDict.menulen(i); ++ii) {
+                        if (menuDict.menustr(i, ii) == menuDict.menustr(menugroupid, menuid)) {
+                            menugroupid = i;
+                            menuid = ii;
+                            i = 1000;
+                            break;
+                        }
+                    }
+                }
+            }else{
+                for (int i = menuDict.menugrouplen()-1; i>0; --i) {
+                    for (int ii = 0; ii < menuDict.menulen(i); ++ii) {
+                        if (menuDict.menustr(i, ii) == menuDict.menustr(menugroupid, menuid)) {
+                            menugroupid = i;
+                            menuid = ii;
+                            i = 0;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
         //TypedArray menuarray=getResources().obtainTypedArray(R.array.menuname);
         LinearLayout layout1=findViewById(R.id.layout1);
-        {
+        /*{
             toggleButtons.add((ToggleButton) findViewById(R.id.amakuti));
             toggleButtons.add((ToggleButton) findViewById(R.id.tyoama));
             toggleButtons.add((ToggleButton) findViewById(R.id.syoukara));
             toggleButtons.add((ToggleButton) findViewById(R.id.tyuukara));
             toggleButtons.add((ToggleButton) findViewById(R.id.karakuti));
-        }
-        int commonoptnum=menuDict.commonoptlen();
+        }*/
+
+        LinearLayout.LayoutParams buttonparam = new LinearLayout.LayoutParams(
+                ConvertSize.width_per_to_px(getBaseContext(),50),
+                ConvertSize.dp_to_px(getBaseContext(),50));
+        int commonoptnum=menuDict.commonoptlen(menugroupid);
         for(int i=0;i<commonoptnum;i++) {//commonopt
-            toggleButtons.get(i).setText(menuDict.menuoptstr(menugroupid,menuid,i));
-            toggleButtons.get(i).setTextOn(menuDict.menuoptstr(menugroupid,menuid,i));
-            toggleButtons.get(i).setTextOff(menuDict.menuoptstr(menugroupid,menuid,i));
+            ToggleButton toggleButton=new ToggleButton(this);
+            String menuoptstr=menuDict.menuoptstr(menugroupid,menuid,i);
+            String valuestr =menuDict.menuoptvaluestr(menugroupid,menuid,i);
+            if(!valuestr.isEmpty()&&Integer.parseInt(valuestr)!=0)
+            {
+                menuoptstr+="("+valuestr+"円)";
+            }
+            toggleButton.setText(menuoptstr);
+            toggleButton.setTextOn(menuoptstr);
+            toggleButton.setTextOff(menuoptstr);
+            toggleButton.setLayoutParams(buttonparam);
+            toggleButton.setId(i);
             buttonids.add(i);
             //buttons.get(i).setText("a");
             //final int finalI = i;
             //toggleButton.setOnCheckedChangeListener(this);
-            toggleButtons.get(i).setOnClickListener(this);
+            toggleButton.setOnClickListener(this);
+            toggleButtons.add(toggleButton);
         }
-        //if(menuid>10)toggleButtons.get(0).setVisibility(View.GONE);//ハーフオプションを消す
         for(int i=0;i<menuDict.menuoptlen(menugroupid,menuid);i++) {//elseopt
             ToggleButton toggleButton=new ToggleButton(this);
             toggleButtons.add(toggleButton);
-            buttonids.add(i+10);
-            toggleButton.setText(menuDict.menuoptstr(menugroupid,menuid,i+10));
-            toggleButton.setTextOn(menuDict.menuoptstr(menugroupid,menuid,i+10));
-            toggleButton.setTextOff(menuDict.menuoptstr(menugroupid,menuid,i+10));
-            toggleButton.setId(i+10);
-            //toggleButton.setTextOff(String.valueOf(menuDict.menuoptweight(menuid,i+10)));
+            buttonids.add(i+50);
+            String menuoptstr=menuDict.menuoptstr(menugroupid,menuid,i+50);
+
+            String valuestr =menuDict.menuoptvaluestr(menugroupid,menuid,i+50);
+            if(!valuestr.isEmpty()&&Integer.parseInt(valuestr)!=0)
+            {
+              menuoptstr+="("+valuestr+"円)";
+            }
+            toggleButton.setText(menuoptstr);
+            toggleButton.setTextOn(menuoptstr);
+            toggleButton.setTextOff(menuoptstr);
+            toggleButton.setLayoutParams(buttonparam);
+            toggleButton.setId(i+50);
+            //toggleButton.setTextOff(String.valueOf(menuDict.menuoptweight(menuid,i+50)));
 
             //buttons.get(i).setText("a");
-            //final int finalI = i+10;
+            //final int finalI = i+50;
             toggleButton.setOnClickListener(this);
         }
-        for(int i=0;i<=menuDict.menuoptlen(menugroupid,menuid)/3;i++){
+        int togglebuttonssize=toggleButtons.size();
+        for(int i=0;i<=toggleButtons.size()/2;i++){
             LinearLayout linearLayout=new LinearLayout(this);
             linearLayouts.add(linearLayout);
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
-            if(toggleButtons.size()>i*3+commonoptnum) {
-                linearLayout.addView(toggleButtons.get(i * 3 + commonoptnum));
-                if(toggleButtons.size()>i*3+1+commonoptnum) {
-                    linearLayout.addView(toggleButtons.get(i * 3 + 1 + commonoptnum));
-                    if (toggleButtons.size() > i * 3 + 2 + commonoptnum) {
-                        linearLayout.addView(toggleButtons.get(i * 3 + 2 + commonoptnum));
-                    }
+            if(togglebuttonssize>i*2) {
+                linearLayout.addView(toggleButtons.get(i * 2 ));
+                if(togglebuttonssize>i*2+1) {
+                    linearLayout.addView(toggleButtons.get(i * 2 + 1));
+                    /*if (togglebuttonssize > i * 3 + 2) {
+                        linearLayout.addView(toggleButtons.get(i * 3 + 2));
+                    }*/
                 }
             }
             layout1.addView(linearLayout);
@@ -97,7 +144,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                 startActivity(intent);
             }
         });*/
-        progressbutton.setText(String.valueOf(menuid));
+        //progressbutton.setText(String.valueOf(menuid));
         progressbutton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -115,6 +162,12 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                 finish();
             }
         });
+        LinearLayout spaceLayout =new LinearLayout(getApplication());
+        spaceLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                ConvertSize.dp_to_px(getApplication(),70)
+        ));
+        layout1.addView(spaceLayout);
     }
     @Override
     public void onClick(View v){
@@ -125,20 +178,22 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
         //buttonView.setChecked();
         for(int i=0;i<toggleButtons.size();++i){
             if(buttonView.getId()==toggleButtons.get(i).getId()){
+                int menuoptgroup=menuDict.menuoptgroup(menugroupid,menuid,buttonids.get(i));
+                int optweight_1=menuDict.menuoptweight(menugroupid,menuid,buttonids.get(i));//今のメニューオプションのウェイト
                 if(isChecked) {
-                    optweight+=menuDict.menuoptweight(menugroupid,menuid,buttonids.get(i));
+                    optweight+=optweight_1;
                     /*if(optweight>maxweight){
                         optweight-=menuDict.menuoptweight(menuid,buttonids.get(i));
                         buttonView.setChecked(false);
                     }*/
-                    if(menuDict.menuoptgroup(menugroupid,menuid,buttonids.get(i))!=0){//メニューグループフラグ追加
-                        groupflag.add(menuDict.menuoptgroup(menugroupid,menuid,buttonids.get(i)));
+                    if(menuoptgroup!=0){//メニューグループフラグ追加
+                        groupflag.add(menuoptgroup);
                     }
                 }else{
-                    optweight-=menuDict.menuoptweight(menugroupid,menuid,buttonids.get(i));
-                    if(menuDict.menuoptgroup(menugroupid,menuid,buttonids.get(i))!=0){//メニューグループフラグ削除
+                    optweight-=optweight_1;
+                    if(menuoptgroup!=0){//メニューグループフラグ削除
                         ArrayList<Integer> arrayList = new ArrayList<>();
-                        arrayList.add(menuDict.menuoptgroup(menugroupid,menuid,buttonids.get(i)));
+                        arrayList.add(menuoptgroup);
                         groupflag.removeAll(arrayList);
                     }
                 }

@@ -18,6 +18,7 @@ public class SeatDecideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seatdecide);
+        SetView.setActionbar(getApplication(),getSupportActionBar(),"座席選択");
         Intent intent=getIntent();
         orderDataHolder=(OrderDataHolder)intent.getSerializableExtra("orderdataholder");
         setButton();

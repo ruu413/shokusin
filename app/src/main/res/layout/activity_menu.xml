@@ -5,13 +5,14 @@
     android:focusable="true"
     android:clickable="true"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center_horizontal|bottom">
+    android:orientation="vertical">
+
 
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
 
 
         <android.support.design.widget.AppBarLayout
@@ -33,6 +34,7 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:textSize="16dp"
                 android:text="種類"
+                android:textColor="@android:color/white"
                 app:layout_scrollFlags="scroll|enterAlways" />
             <Spinner
                 android:spinnerMode="dialog"
@@ -41,6 +43,7 @@
                 android:layout_height="match_parent"
                 android:entries="@array/spinnerstr"
                 android:gravity="center_horizontal|center_vertical"
+                android:textColor="@android:color/white"
                 app:layout_scrollFlags="scroll|enterAlways">
 
             </Spinner>
@@ -50,7 +53,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="400dp"/>
+        android:layout_height="match_parent"/>
     <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp">
@@ -67,32 +70,42 @@
                 android:layout_height="match_parent"/>
         </LinearLayout>
     </ScrollView>-->
-    </android.support.design.widget.CoordinatorLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:foregroundGravity="bottom"
-        android:gravity="bottom"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button_ok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
-            android:text="注文確定" />
-        <Button
-            android:id="@+id/godelete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
-            android:text="注文確認/変更" />
-        <TextView
-            android:id="@+id/valuetext"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""/>
-    </LinearLayout>
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/valuetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button_ok"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:text="注文確定" />
+                <Button
+                    android:id="@+id/godelete"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:text="注文確認/変更" /><!--widthはコードで50%-->
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

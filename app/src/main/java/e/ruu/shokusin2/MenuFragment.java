@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+
 import java.util.ArrayList;
 
 public class MenuFragment extends Fragment {//TODO menugroupidをどうにかする
@@ -35,7 +36,7 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
         LinearLayout spaceLayout =new LinearLayout(getContext());
         spaceLayout.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                120
+                ConvertSize.dp_to_px(getContext(),40)
                 ));
         LinearLayout layout1=new LinearLayout(getActivity());
         layout1.setLayoutParams(new LinearLayout.LayoutParams(
@@ -76,6 +77,12 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
             }
             layout1.addView(innerlayouts.get(i));
         }
+        LinearLayout spaceLayout2 =new LinearLayout(getContext());
+        spaceLayout2.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                ConvertSize.dp_to_px(getContext(),100)
+        ));
+        layout1.addView(spaceLayout2);
         scrollView.addView(layout1);
         return scrollView;
     }

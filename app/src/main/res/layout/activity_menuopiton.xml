@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:focusable="true"
     android:clickable="true"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal|bottom">
 
-
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/layout1"
@@ -26,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>-->
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -55,13 +58,13 @@
                     android:id="@+id/karakuti"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-            </LinearLayout>
+            </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:foregroundGravity="bottom"
         android:gravity="bottom"
@@ -70,9 +73,8 @@
         <Button
             android:id="@+id/button_ok"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
+            android:layout_height="70dp"
             android:text="注文追加" />
     </LinearLayout>
-
+    </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>

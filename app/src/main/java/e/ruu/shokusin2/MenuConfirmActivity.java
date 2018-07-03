@@ -14,8 +14,10 @@ public class MenuConfirmActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
         setContentView(R.layout.activity_menuconfirm);
+        SetView.setActionbar(getApplication(),getSupportActionBar(),"注文確認");
         //MenuDict menuDict=new MenuDict(getResources());
         String str="席";
         String url="席";

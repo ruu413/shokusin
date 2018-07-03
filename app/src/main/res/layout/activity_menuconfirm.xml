@@ -2,18 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MenuConfirmActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_url"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="line" />
+            <LinearLayout
+                android:id="@+id/menudelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border"
+                    android:textSize="20sp"
+                    android:text="TextView" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border"
+                    android:text="上記の内容が正しければ'LINEで送る'ボタンを押して食神の公式LINEアカウントを選択してください。\n
+すると、注文テキストが書かれた状態でトーク画面が立ち上がるため、送信ボタンを押して注文を完了してください" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:foregroundGravity="bottom"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_url"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/holo_green_light"
+                android:text="LINEに送る" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        SetView.setActionbar(getApplication(),getSupportActionBar(),"メニュー選択");
         valueText = findViewById(R.id.valuetext);
         menuDict=MenuDict.getInstance();//new MenuDict(getResources());
         //setContentView(R.layout.activity_main);
@@ -36,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         scrollView.addView(layout1);
         setContentView(scrollView);*/
         //MenuDict menuDict=new MenuDict(getResources());
-        valueText.setText(String.valueOf(menuDict.getValue(orderDataHolder)));
+        valueText.setText("合計:"+String.valueOf(menuDict.getValue(orderDataHolder)+"円"));
         //LinearLayout layout1=findViewById(R.id.layout1);//ここから
         // フラグメントマネージャーでフラグメント操作をする
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
@@ -68,7 +69,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
         /*FragmentManager fragmentManager = getFragmentManager();
-// 処理の開始
+// 処理の開
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 // 追加したいフラグメントの生成
@@ -123,7 +124,13 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
+
+        LinearLayout.LayoutParams buttonparam =new LinearLayout.LayoutParams(
+                ConvertSize.width_per_to_px(getBaseContext(),50),ConvertSize.dp_to_px(getBaseContext(),70)
+        );
         Button progressbutton=findViewById(R.id.button_ok);
+        progressbutton.setLayoutParams(buttonparam);
+        progressbutton.setWidth(ConvertSize.width_per_to_px(getBaseContext(),50));
         progressbutton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -135,6 +142,8 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
         Button godeletebutton = findViewById(R.id.godelete);
+        godeletebutton.setLayoutParams(buttonparam);
+        godeletebutton.setWidth(ConvertSize.width_per_to_px(getBaseContext(),50));
         godeletebutton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -149,7 +158,7 @@ public class MenuActivity extends AppCompatActivity {
 
     protected void onActivityResult(int reqCode,int resultCode,Intent intent){
         super.onActivityResult(reqCode, resultCode, intent);
-        valueText.setText(String.valueOf(menuDict.getValue(orderDataHolder)));
+        valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
         if(intent==null) {
             return;
         }
@@ -160,7 +169,7 @@ public class MenuActivity extends AppCompatActivity {
         if(resultCode==111||reqCode==111){
             orderDataHolder=(OrderDataHolder)intent.getSerializableExtra("orderdataholder");
             //finish();
-            valueText.setText(String.valueOf(menuDict.getValue(orderDataHolder)));
+            valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
             return;
         }
         //int menuid=reqCode;
@@ -169,6 +178,6 @@ public class MenuActivity extends AppCompatActivity {
         //buttons.get(0).setText(menuid);
         //buttons.get(2).setText(String.valueOf(retorder.optionid[1]));
         orderDataHolder.puts(retorder);
-        valueText.setText(String.valueOf(menuDict.getValue(orderDataHolder)));
+        valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
     }
 }
