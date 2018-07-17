@@ -16,6 +16,8 @@ public class MenuConfirmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+
+        if(menuDict==null)finish();
         setContentView(R.layout.activity_menuconfirm);
         SetView.setActionbar(getApplication(),getSupportActionBar(),"注文確認");
         //MenuDict menuDict=new MenuDict(getResources());

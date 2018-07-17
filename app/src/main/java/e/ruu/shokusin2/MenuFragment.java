@@ -47,7 +47,7 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
         for(int i=0;i<menuDict.menulen(menugroupid);i++) {
             buttons.add(new MenuButton(getActivity()));
             buttons.get(i).setText(menuDict.menustr(menugroupid,i));
-            buttons.get(i).setValueText(menuDict.menuvaluestr(menugroupid,i));
+            buttons.get(i).setValueText(menuDict.menuvaluestr(menugroupid,i)+"円");
 
             //buttons.get(i).setText("a");
             final int finalI = i;
@@ -80,7 +80,7 @@ public class MenuFragment extends Fragment {//TODO menugroupidをどうにかす
         LinearLayout spaceLayout2 =new LinearLayout(getContext());
         spaceLayout2.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                ConvertSize.dp_to_px(getContext(),100)
+                ConvertSize.dp_to_px(getContext(),140)
         ));
         layout1.addView(spaceLayout2);
         scrollView.addView(layout1);

@@ -23,7 +23,6 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuopiton);
-        SetView.setActionbar(getApplication(),getSupportActionBar(),"オプション選択");
         //setToggleButtons();
         //setContentView(R.layout.activity_menuopiton);
         Button progressbutton=findViewById(R.id.button_ok);
@@ -33,6 +32,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
 
         menuid =intent.getIntExtra("menuid",0);
         menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+        if(menuDict==null)finish();
         menugroupid=intent.getIntExtra("menugroupid",0);
         if(menugroupid==0){//menugroupid==0(全メニュー)の時それぞれのメニューグループに振り分ける
             if(menuid<menuDict.menulen(0)/2) {
@@ -59,6 +59,8 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                 }
             }
         }
+        String menustr=menuDict.menustr(menugroupid,menuid);
+        SetView.setActionbar(getApplication(),getSupportActionBar(),menustr+"のオプション選択");
         //TypedArray menuarray=getResources().obtainTypedArray(R.array.menuname);
         LinearLayout layout1=findViewById(R.id.layout1);
         /*{

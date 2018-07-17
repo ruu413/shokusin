@@ -47,6 +47,7 @@ public class SeatDecideActivity extends AppCompatActivity {
         buttons.add((Button)findViewById(R.id.button7));
         buttons.add((Button)findViewById(R.id.button8));
         buttons.add((Button)findViewById(R.id.button9));
+        buttons.add((Button)findViewById(R.id.button10));
         buttons.add((Button)findViewById(R.id.buttonA));
         buttons.add((Button)findViewById(R.id.buttonB));
         buttons.add((Button)findViewById(R.id.buttonC));

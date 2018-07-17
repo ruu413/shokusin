@@ -27,6 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         SetView.setActionbar(getApplication(),getSupportActionBar(),"メニュー選択");
         valueText = findViewById(R.id.valuetext);
         menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+        if(menuDict==null)finish();
         //setContentView(R.layout.activity_main);
         /*ScrollView scrollView=new ScrollView(this);
         LinearLayout layout1 = new LinearLayout(this);

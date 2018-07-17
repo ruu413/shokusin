@@ -34,6 +34,7 @@ public class MenuDeleteActivity extends AppCompatActivity {
         linearLayouts.clear();
         for(int i = 0;i<orderDataHolder.size();++i) {
             MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+            if(menuDict==null)finish();
             LinearLayout linearLayout = new LinearLayout(getApplication());
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setBackgroundResource(R.drawable.text_border);

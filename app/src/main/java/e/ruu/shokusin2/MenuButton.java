@@ -17,17 +17,21 @@ public class MenuButton extends LinearLayout{
     public Button button;
     public TextView textView;
     public TextView textValueView;
-    protected int height;
-    protected int width;
     protected Paint paint;
+    protected int width;
+    protected int height;
     public MenuButton(Context context) {
         super(context);
+        width = ConvertSize.width_per_to_px(context,50);
+        height= ConvertSize.sp_to_px(context,70);
         setWillNotDraw(false);
-        width= getResources().getDisplayMetrics().widthPixels/2;
-        height=200;
         setOrientation(LinearLayout.VERTICAL);
         textView= new TextView(getContext());
+        textView.setTextSize(16);
+        textView.setTextColor(Color.BLACK);
         textValueView = new TextView(getContext());
+        textValueView.setTextSize(16);
+        textValueView.setTextColor(Color.BLACK);
         //textValueView.setText("500");
         paint= new Paint();
         ViewGroup.MarginLayoutParams layoutParams = new LinearLayout.LayoutParams(

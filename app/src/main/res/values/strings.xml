@@ -472,7 +472,7 @@
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
         <item>ご飯大盛り,1,0,3</item>
-        <item>ご飯少なめ,1,0,3</item>
+        <item>ご飯少なめ,0,0,3</item>
         <item>具大盛り,1,150</item>
         <item>味濃いめ,1</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
@@ -483,7 +483,7 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
-        <item>ご飯付き,1,120</item>
+        <item>ご飯付き,0,120</item>
         <item>ハーフ,290,0</item>
         <item>具大盛り,1,150</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
@@ -502,6 +502,7 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>山椒,100,0,6</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -511,6 +512,7 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>山椒,100,0,6</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -521,6 +523,7 @@
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
         <item>汁抜き,1</item>
+        <item>山椒,100,0,6</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -555,7 +558,7 @@
         <item>ハーフ,290,-100</item>
         <item>玉子</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="_2ban">
@@ -565,7 +568,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="_3ban">
@@ -575,7 +578,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="_4ban">
@@ -585,7 +588,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
 
@@ -595,7 +598,7 @@
         <item>590</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
 
@@ -606,7 +609,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,100,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
 
@@ -617,7 +620,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,100,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
 
     </string-array>
@@ -629,7 +632,7 @@
         <item>1</item>
         <item>ハーフ,290,-100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
 
@@ -640,7 +643,7 @@
         <item>1</item>
         <item>ハーフ,290</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="_15ban">
@@ -650,7 +653,7 @@
         <item>1</item>
         <item>ハーフ,290</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="_osusume">
@@ -660,7 +663,7 @@
         <item>1</item>
         <item>ハーフ,290</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
     </string-array>
     <string-array name="a">
@@ -1007,8 +1010,9 @@
         <item>麻婆麺</item>
         <item>500</item>
         <item>1</item>
+        <item>大盛り,1,100,0</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,100,0,5</item>
+        <item>ニンニク少なめ,1,0,5</item>
         <item>玉子</item>
     </string-array>
     <string-array name="m_2ban">
@@ -1016,8 +1020,9 @@
         <item>2番麺</item>
         <item>500</item>
         <item>1</item>
+        <item>大盛り,1,100,0</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,100,0,5</item>
+        <item>ニンニク少なめ,1,0,5</item>
         <item>玉子,100,100,</item>
     </string-array>
     <string-array name="m_3ban">
@@ -1025,21 +1030,27 @@
         <item>3番麺</item>
         <item>600</item>
         <item>1</item>
+        <item>大盛り,1,100,100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,100,0,5</item>
+        <item>ニンニク少なめ,1,0,5</item>
     </string-array>
     <string-array name="m_4ban">
         <item>4番麺 豚肉とザーサイの細切り炒め麺</item>
         <item>4番麺</item>
         <item>600</item>
         <item>1</item>
-
+        <item>大盛り,1,100,100</item>
+        <item>ニンニク,100,0,5</item>
+        <item>ニンニク少なめ,1,0,5</item>
     </string-array>
 
     <string-array name="m_5ban">
         <item>5番麺 麻婆春雨麺</item>
         <item>5番麺</item>
         <item>600</item>
+        <item>大盛り,1,100,100</item>
+        <item>ニンニク,100,0,5</item>
+        <item>ニンニク少なめ,1,0,5</item>
     </string-array>
 
     <string-array name="m_6ban">
@@ -1047,7 +1058,9 @@
         <item>6番麺</item>
         <item>600</item>
         <item>1</item>
-
+        <item>大盛り,1,100,100</item>
+        <item>ニンニク,100,0,5</item>
+        <item>ニンニク少なめ,100,0,5</item>
     </string-array>
 
     <string-array name="m_7ban">
@@ -1055,8 +1068,9 @@
         <item>7番麺</item>
         <item>600</item>
         <item>1</item>
+        <item>大盛り,1,100,100</item>
         <item>ニンニク,100,0,5</item>
-        <item>ニンニク少なめ,1,0,5</item>
+        <item>ニンニク少なめ,100,0,5</item>
 
     </string-array>
 
@@ -1065,6 +1079,7 @@
         <item>8番麺</item>
         <item>600</item>
         <item>1</item>
+        <item>大盛り,1,100,100</item>
         <item>ニンニク,100,0,5</item>
         <item>ニンニク少なめ,1,0,5</item>
     </string-array>

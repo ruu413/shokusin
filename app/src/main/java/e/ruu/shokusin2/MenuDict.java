@@ -55,7 +55,7 @@ public class MenuDict{
         return (String) typedArrays.get(0).getTextArray(menuid)[1];
     }*/
     public String seatstr(int seatnum){
-        String[] seats={"1","2","3","4","5","6","7","8","9","A","B","C"};
+        String[] seats={"1","2","3","4","5","6","7","8","9","10","A","B","C"};
         return seats[seatnum];
     }/*
     public String menuvaluestr(int menuid){
