@@ -1,6 +1,8 @@
 package e.ruu.shokusin2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,9 +36,9 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
         menuDict=MenuDict.getInstance();//new MenuDict(getResources());
         if(menuDict==null)finish();
         menugroupid=intent.getIntExtra("menugroupid",0);
-        if(menugroupid==0){//menugroupid==0(全メニュー)の時それぞれのメニューグループに振り分ける
+        /*if(menugroupid==1){//menugroupid==0(全メニュー)の時それぞれのメニューグループに振り分ける
             if(menuid<menuDict.menulen(0)/2) {
-                for (int i = 1; i < menuDict.menugrouplen(); ++i) {
+                for (int i = 2; i < menuDict.menugrouplen(); ++i) {
                     for (int ii = 0; ii < menuDict.menulen(i); ++ii) {
                         if (menuDict.menustr(i, ii) == menuDict.menustr(menugroupid, menuid)) {
                             menugroupid = i;
@@ -47,7 +49,7 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                     }
                 }
             }else{
-                for (int i = menuDict.menugrouplen()-1; i>0; --i) {
+                for (int i = menuDict.menugrouplen()-1; i>=2; --i) {
                     for (int ii = 0; ii < menuDict.menulen(i); ++ii) {
                         if (menuDict.menustr(i, ii) == menuDict.menustr(menugroupid, menuid)) {
                             menugroupid = i;
@@ -58,9 +60,39 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
                     }
                 }
             }
-        }
+        }*/
         String menustr=menuDict.menustr(menugroupid,menuid);
-        SetView.setActionbar(getApplication(),getSupportActionBar(),menustr+"のオプション選択");
+        //SetView.setActionbar(getApplication(),getSupportActionBar(),menustr+"のオプション選択");
+        Context context=getApplication();
+        LinearLayout appbarlayout = new LinearLayout(context);
+        LinearLayout appbarstrlayout=new LinearLayout(context);
+        LinearLayout appbarbuttonlayout=new LinearLayout(context);
+        SetView.setActionbar(context,getSupportActionBar(),appbarlayout);
+        appbarlayout.addView(appbarstrlayout);
+        appbarlayout.addView(appbarbuttonlayout);
+        TextView appbartextview=new TextView(context);
+        ToggleButton favoritebutton=new ToggleButton(context);
+        appbarstrlayout.addView(appbartextview);
+        appbarbuttonlayout.addView(favoritebutton);
+        appbarbuttonlayout.setLayoutParams(new LinearLayout.LayoutParams(
+                ConvertSize.dp_to_px(context,100),
+                LinearLayout.LayoutParams.MATCH_PARENT));
+        appbarstrlayout.setLayoutParams(new LinearLayout.LayoutParams(
+                ConvertSize.width_per_to_px(context,100)-ConvertSize.dp_to_px(context,100),
+                LinearLayout.LayoutParams.MATCH_PARENT));
+        appbartextview.setText(menustr+"のオプション選択");
+        appbartextview.setTextColor(Color.WHITE);
+        appbartextview.setTextSize(ConvertSize.dp_to_px(context,7));
+        favoritebutton.setChecked(menuDict.checkFavoriteMenu(menugroupid,menuid));
+        favoritebutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                menuDict.setFavoriteChangeFlag();
+                ToggleButton button = (ToggleButton)v;
+                menuDict.setFavoriteMenu(menugroupid,menuid,button.isChecked());
+            }
+        });
         //TypedArray menuarray=getResources().obtainTypedArray(R.array.menuname);
         LinearLayout layout1=findViewById(R.id.layout1);
         /*{

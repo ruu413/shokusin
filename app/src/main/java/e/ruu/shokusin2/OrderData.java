@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class OrderData implements Serializable {
     public int menuid;
     public int menugroupid;
-    public ArrayList<Integer> optionid=new ArrayList<>();
+    public ArrayList<Integer> optionid=new ArrayList<Integer>();
     //public Date date;
     public OrderData(){
         this.menuid=0;

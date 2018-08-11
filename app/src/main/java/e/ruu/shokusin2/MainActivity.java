@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        MenuDict.createInstance(getResources());
+        MenuDict.createInstance(getApplication());
         MenuDict menuDict= MenuDict.getInstance();
         Button goMenuButton =findViewById(R.id.gomenubutton);
         //goMenuButton.setText(menuDict.menuoptvaluestr(0,0));

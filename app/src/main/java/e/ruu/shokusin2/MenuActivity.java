@@ -20,6 +20,8 @@ public class MenuActivity extends AppCompatActivity {
     OrderDataHolder orderDataHolder=new OrderDataHolder();
     TextView valueText;
     MenuDict menuDict;
+    MenuFragmentPagerAdapter adapter;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +45,8 @@ public class MenuActivity extends AppCompatActivity {
         // フラグメントマネージャーでフラグメント操作をする
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         //FragmentManager manager=getFragmentManager();
-        final ViewPager viewPager=findViewById(R.id.viewpager);
-        MenuFragmentPagerAdapter adapter = new MenuFragmentPagerAdapter(manager);
+        viewPager=findViewById(R.id.viewpager);
+        adapter = new MenuFragmentPagerAdapter(manager);
         viewPager.setAdapter(adapter);
         //final ViewPager viewPager1 =viewPager;
         final Spinner spinner = findViewById(R.id.spinner);
@@ -161,6 +163,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onActivityResult(reqCode, resultCode, intent);
         valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
         if(intent==null) {
+            if(menuDict.getFavoriteChangeFlag()&&((ViewPager)findViewById(R.id.viewpager)).getCurrentItem()<2) {
+                //recreate();
+                ((MenuFragment)(adapter.getItem(0))).reload();
+            }
             return;
         }
         if(resultCode==10000){
@@ -171,6 +177,12 @@ public class MenuActivity extends AppCompatActivity {
             orderDataHolder=(OrderDataHolder)intent.getSerializableExtra("orderdataholder");
             //finish();
             valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
+
+            //if(menuDict.getFavoriteChangeFlag())recreate();
+            if(menuDict.getFavoriteChangeFlag()&&((ViewPager)findViewById(R.id.viewpager)).getCurrentItem()<2) {
+                //recreate();
+                ((MenuFragment) (adapter.getItem(0))).reload();
+            }
             return;
         }
         //int menuid=reqCode;
@@ -180,5 +192,11 @@ public class MenuActivity extends AppCompatActivity {
         //buttons.get(2).setText(String.valueOf(retorder.optionid[1]));
         orderDataHolder.puts(retorder);
         valueText.setText("合計"+String.valueOf(menuDict.getValue(orderDataHolder))+"円");
+        //if(menuDict.getFavoriteChangeFlag())recreate();
+
+        if(menuDict.getFavoriteChangeFlag()){//&&((ViewPager)findViewById(R.id.viewpager)).getCurrentItem()<2) {
+            //recreate();
+            ((MenuFragment) (adapter.getItem(0))).reload();
+        }
     }
 }

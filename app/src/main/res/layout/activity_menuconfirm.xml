@@ -22,13 +22,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="20dp"/>
-                <TextView
-                    android:id="@+id/textView"
+                <EditText
+                    android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border"
                     android:textSize="20sp"
-                    android:text="TextView" />
+                    android:text="EditText" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"/>
@@ -37,7 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border"
-                    android:text="上記の内容が正しければ'LINEで送る'ボタンを押して食神の公式LINEアカウントを選択してください。\n
+                    android:textSize="15sp"
+                    android:text="この画面で編集することもできます。上記の内容が正しければ'LINEで送る'ボタンを押して食神の公式LINEアカウントを選択してください。\n
 すると、注文テキストが書かれた状態でトーク画面が立ち上がるため、送信ボタンを押して注文を完了してください" />
 
                 <LinearLayout

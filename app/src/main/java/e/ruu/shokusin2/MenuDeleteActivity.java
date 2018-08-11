@@ -2,6 +2,7 @@ package e.ruu.shokusin2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,17 +25,18 @@ public class MenuDeleteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menudelete);
         SetView.setActionbar(getApplication(),getSupportActionBar(),"注文確認/削除");
         //menuDict =new MenuDict(getResources());
+        MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
+        if(menuDict==null)finish();
         rootlayout = findViewById(R.id.menudelete);
         Intent intent = getIntent();
         orderDataHolder = (OrderDataHolder) intent.getSerializableExtra("orderdataholder");
-        setButton();
+        if(orderDataHolder==null)finish();
+        setButton(menuDict);
     }
-    void setButton(){
+    void setButton(final MenuDict menuDict){
         rootlayout.removeAllViews();
         linearLayouts.clear();
         for(int i = 0;i<orderDataHolder.size();++i) {
-            MenuDict menuDict=MenuDict.getInstance();//new MenuDict(getResources());
-            if(menuDict==null)finish();
             LinearLayout linearLayout = new LinearLayout(getApplication());
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setBackgroundResource(R.drawable.text_border);
@@ -63,17 +65,24 @@ public class MenuDeleteActivity extends AppCompatActivity {
             linearLayout.addView(linearLayout2);
             linearLayout.addView(linearLayout3);
             linearLayout.addView(linearLayout4);
+            int textsize=16;
             TextView textView1 = new TextView(getApplication());
+            textView1.setTextColor(Color.BLACK);
+            textView1.setTextSize(textsize);
             textView1.setText(menuDict.menustr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid));
             linearLayout1.addView(textView1);
             for(int ii=0;ii<orderDataHolder.get(i).optnum();ii++) {
                 TextView textView2=new TextView(getApplication());
+                if(ii%2==1){textView2.setTextColor(Color.BLACK);}
+                textView2.setTextSize(textsize);
                 textView2.setText(menuDict.menuoptstr(orderDataHolder.get(i).menugroupid,orderDataHolder.get(i).menuid, orderDataHolder.get(i).optionid.get(ii)));
                 linearLayout2.addView(textView2);
             }
-            TextView textview3= new TextView(getApplication());
-            textview3.setText(menuDict.menuvaluestrwithopt(orderDataHolder.get(i))+"円");
-            linearLayout3.addView(textview3);
+            TextView textView3= new TextView(getApplication());
+            textView3.setTextColor(Color.BLACK);
+            textView3.setTextSize(textsize);
+            textView3.setText(menuDict.menuvaluestrwithopt(orderDataHolder.get(i))+"円");
+            linearLayout3.addView(textView3);
 
             final Button button = new Button(getApplication());
             button.setText("削除");
@@ -88,7 +97,7 @@ public class MenuDeleteActivity extends AppCompatActivity {
                     if(!orderDataHolder.delete(finali)){
                         button.setText("a");
                     }
-                    setButton();
+                    setButton(menuDict);
                     //reload();
                 }
             });

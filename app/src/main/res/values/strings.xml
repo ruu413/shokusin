@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Shokusin2</string>
+    <string name="app_name">食神App</string>
     <string name="title_activity_seat_decide">SeatDecideActivity</string>
     <array name="spinnerstr">
+        <item>お気に入り</item>
         <item>全メニュー</item>
         <item>590円定食/日・週替わり</item>
         <item>サービスセット</item>
@@ -12,6 +13,7 @@
         <item>金曜定食</item>
         <item>土曜定食</item>
         <item>日曜定食</item>
+        <item>期間限定/新メニュー</item>
         <item>ご飯類</item>
         <item>スープ類</item>
         <item>麺類</item>
@@ -23,6 +25,7 @@
         <item>飲み物</item>
     </array>
     <array name="menugroup">
+        <item>@array/favorite</item>
         <item>@array/menuname</item>
         <item>@array/teisyoku</item>
         <item>@array/service</item>
@@ -33,6 +36,7 @@
         <item>@array/kin</item>
         <item>@array/doyo</item>
         <item>@array/niti</item>
+        <item>@array/_new</item>
         <item>@array/gohan_g</item>
         <item>@array/soup_g</item>
         <item>@array/men_g</item>
@@ -43,6 +47,7 @@
         <item>@array/otumami_g</item>
         <item>@array/nomimono_g</item>
     </array>
+    <array name="favorite"></array>
     <array name="menuname">
         <item>@array/_1ban</item>
         <item>@array/_2ban</item>
@@ -88,6 +93,31 @@
         <item>@array/niti12</item>
         <item>@array/niti13</item>
         <item>@array/niti14</item>
+        <item>@array/new1</item>
+        <item>@array/new2</item>
+        <!--<item>@array/new3</item>-->
+        <item>@array/new4</item>
+        <item>@array/new5</item>
+        <item>@array/new6</item>
+        <item>@array/new7</item>
+        <item>@array/new8</item>
+        <item>@array/new9</item>
+        <item>@array/new10</item>
+        <item>@array/new11</item>
+        <item>@array/new12</item>
+        <item>@array/new13</item>
+        <item>@array/new14</item>
+        <item>@array/new15</item>
+        <item>@array/new16</item>
+        <item>@array/new17</item>
+        <item>@array/new18</item>
+        <item>@array/new19</item>
+        <item>@array/new20</item>
+        <item>@array/new21</item>
+        <item>@array/new22</item>
+        <item>@array/new23</item>
+        <item>@array/new24</item>
+        <item>@array/new25</item>
         <item>@array/g1</item>
         <item>@array/g2</item>
         <item>@array/g3</item>
@@ -287,6 +317,33 @@
         <item>@array/niti13</item>
         <item>@array/niti14</item>
     </string-array>
+    <string-array name="_new">
+        <item>@array/new1</item>
+        <item>@array/new2</item>
+        <!--<item>@array/new3</item>-->
+        <item>@array/new4</item>
+        <item>@array/new5</item>
+        <item>@array/new6</item>
+        <item>@array/new7</item>
+        <item>@array/new8</item>
+        <item>@array/new9</item>
+        <item>@array/new10</item>
+        <item>@array/new11</item>
+        <item>@array/new12</item>
+        <item>@array/new13</item>
+        <item>@array/new14</item>
+        <item>@array/new15</item>
+        <item>@array/new16</item>
+        <item>@array/new17</item>
+        <item>@array/new18</item>
+        <item>@array/new19</item>
+        <item>@array/new20</item>
+        <item>@array/new21</item>
+        <item>@array/new22</item>
+        <item>@array/new23</item>
+        <item>@array/new24</item>
+        <item>@array/new25</item>
+    </string-array>
     <string-array name="gohan_g">
         <item>@array/g1</item>
         <item>@array/g2</item>
@@ -443,6 +500,7 @@
     </string-array>
 
     <array name="commonoptmenugroup">
+        <item>@array/cm_menuname</item>
         <item>@array/cm_menuname</item><!--menuname-->
         <item>@array/cm_teisyokukei1</item><!--teisyoku-->
         <item>@array/cm_service</item><!--service-->
@@ -453,6 +511,7 @@
         <item>@array/cm_teisyokukei1</item><!--kin-->
         <item>@array/cm_teisyokukei1</item><!--doyo-->
         <item>@array/cm_teisyokukei1</item><!--niti-->
+        <item>@array/cm__new</item><!---_new-->
         <item>@array/cm_gohan_g</item><!--gohan_g-->
         <item>@array/cm_soup_g</item><!--soup_g-->
         <item>@array/cm_men_g</item><!--men_g-->
@@ -474,7 +533,8 @@
         <item>ご飯大盛り,1,0,3</item>
         <item>ご飯少なめ,0,0,3</item>
         <item>具大盛り,1,150</item>
-        <item>味濃いめ,1</item>
+        <item>味濃いめ,100</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
     </string-array>
     <string-array name="cm_teisyokukei2">
@@ -485,7 +545,9 @@
         <item>辛口,100,0,2</item>
         <item>ご飯付き,0,120</item>
         <item>ハーフ,290,0</item>
+        <item>味濃いめ,100</item>
         <item>具大盛り,1,150</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
     </string-array>
     <string-array name="cm_service">
@@ -494,6 +556,16 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>塩,100,0</item>
+        <!--<item>オプション名,weight,追加価格,group</item>-->
+    </string-array>
+    <string-array name="cm__new">
+        <item>甘口,100,0,1</item>
+        <item>超甘,100,0,1</item>
+        <item>小辛,100,0,2</item>
+        <item>中辛,100,0,2</item>
+        <item>辛口,100,0,2</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
     </string-array>
     <string-array name="cm_gohan_g">
@@ -502,7 +574,9 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>味濃いめ,100</item>
         <item>山椒,100,0,6</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -513,6 +587,8 @@
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
         <item>山椒,100,0,6</item>
+        <item>味濃いめ,100</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -523,7 +599,9 @@
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
         <item>汁抜き,1</item>
+        <item>味濃いめ,100</item>
         <item>山椒,100,0,6</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -533,6 +611,7 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -542,6 +621,7 @@
         <item>小辛,100,0,2</item>
         <item>中辛,100,0,2</item>
         <item>辛口,100,0,2</item>
+        <item>塩,100,0</item>
         <!--<item>オプション名,weight,追加価格,group</item>-->
 
     </string-array>
@@ -611,6 +691,8 @@
         <item>ニンニク,100,0,5</item>
         <item>ニンニク少なめ,0,0,5</item>
         <item>山椒,100,0,6</item>
+        <item>醤油,100,0,10</item>
+        <item>チリソース,100,0,10</item>
     </string-array>
 
     <string-array name="_7ban">
@@ -874,13 +956,176 @@
         <item>730</item>
         <item>1</item>
     </string-array>
+    <string-array name="new1">
+        <item>牛肉の麻ラー前菜</item>
+        <item>牛肉の麻ラー前菜</item>
+        <item>600</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new2">
+        <item>水煮白身魚</item>
+        <item>水煮白煮魚</item>
+        <item>910</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new3">
+        <item>鶏肉の唐揚</item>
+        <item>鶏肉の唐揚</item>
+        <item>700</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new4">
+        <item>牛肉のオイスターソース炒飯</item>
+        <item>牛肉のオイスターソース炒飯</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new5">
+        <item>牛ハチノスとアワビ茸炒め</item>
+        <item>牛ハチノスとアワビ茸炒め</item>
+        <item>880</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new6">
+        <item>冷やしラーメン</item>
+        <item>冷やしラーメン</item>
+        <item>490</item>
+        <item>1</item>
+        <item>汁抜き</item>
+    </string-array>
+    <string-array name="new7">
+        <item>ジャージャン麺</item>
+        <item>ジャージャン麺</item>
+        <item>770</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new8">
+        <item>冷やし中華</item>
+        <item>冷やし中華</item>
+        <item>800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new9">
+        <item>四川風つけ麺</item>
+        <item>四川風つけ麺</item>
+        <item>800</item>
+        <item>1</item>
+        <item>大盛り,0,70</item>
+    </string-array>
+    <string-array name="new10">
+        <item>マーラー混ぜ麺</item>
+        <item>マーラー混ぜ麺</item>
+        <item>800</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new11">
+        <item>油淋鶏</item>
+        <item>油淋鶏</item>
+        <item>730</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new12">
+        <item>鶏肉の唐揚</item>
+        <item>鶏肉の唐揚</item>
+        <item>700</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new13">
+        <item>排骨麺</item>
+        <item>排骨麺</item>
+        <item>720</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new14">
+        <item>排骨飯</item>
+        <item>排骨飯</item>
+        <item>800</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new15">
+        <item>ジャージャン丼</item>
+        <item>ジャージャン丼</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new16">
+        <item>牛肉の台湾バーベキューソース炒め</item>
+        <item>牛肉の台湾バーベキューソース炒め</item>
+        <item>800</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new17">
+        <item>鉄板かき</item>
+        <item>鉄板かき</item>
+        <item>910</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new18">
+        <item>鉄板ラム肉</item>
+        <item>鉄板ラム肉</item>
+        <item>910</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new19">
+        <item>牛ハチノスの広東風炒め</item>
+        <item>牛ハチノスの広東風炒め</item>
+        <item>800</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new20">
+        <item>マーラータン</item>
+        <item>マーラータン</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new21">
+        <item>マーラー牛肉麺</item>
+        <item>マーラー牛肉麺</item>
+        <item>780</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new22">
+        <item>黒コショウ海鮮炒飯</item>
+        <item>黒コショウ海鮮炒飯</item>
+        <item>700</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="new23">
+        <item>牛アキレスとブロッコリー炒め</item>
+        <item>牛アキレスとブロッコリー炒め</item>
+        <item>780</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new24">
+        <item>海老とチンゲン菜とシイタケ炒め</item>
+        <item>海老とチンゲン菜とシイタケ炒め</item>
+        <item>700</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
+    <string-array name="new25">
+        <item>白身魚の甘酢炒め</item>
+        <item>白身魚の甘酢炒め</item>
+        <item>780</item>
+        <item>1</item>
+        <item>ご飯付き,0,120</item>
+    </string-array>
     <string-array name="g1">
         <item>食神炒飯</item>
         <item>食神炒飯</item>
         <item>700</item>
         <item>1</item>
     </string-array>
-
     <string-array name="g2">
         <item>ニンニク入り炒飯</item>
         <item>にんにく炒飯</item>
@@ -956,7 +1201,6 @@
         <item>800</item>
         <item>1</item>
     </string-array>
-
     <string-array name="g14">
         <item>海老チリ丼</item>
         <item>海老チリ丼</item>
@@ -1721,6 +1965,7 @@
         <item>210</item>
         <item>1</item>
     </string-array>
+
 
 </resources>
 

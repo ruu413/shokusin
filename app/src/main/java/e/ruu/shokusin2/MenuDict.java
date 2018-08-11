@@ -1,6 +1,7 @@
 package e.ruu.shokusin2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -8,18 +9,33 @@ import android.R.array;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class MenuDict{
     private ArrayList<TypedArray> typedArrays;// = new TypedArray<TypedArray>();//=getResources().obtainTypedArray(0);
     private Resources res;
+    private Context context;
+    private ArrayList<ArrayList<Integer>> favoritemenu;//[0]menugroupid[1]menuid
+    private boolean favoritechangeflag= false;
     //private String[] commonoptstr={"甘口,100,0,1","超甘,100,0,1","小辛,100,0,2","中辛,100,0,2","辛口,100,0,2"};
     private ArrayList<TypedArray> commonoptstrs;
     private static MenuDict instance;
-    private MenuDict(Resources res){
-        this.res=res;
+    private MenuDict(Context context){
+        this.context=context;
+        this.res=context.getResources();
         typedArrays = new ArrayList<>();
         commonoptstrs = new ArrayList<>();
         TypedArray typedArray1=res.obtainTypedArray(R.array.menugroup);
@@ -30,14 +46,23 @@ public class MenuDict{
         for(int i=0;i<typedArray2.length();++i) {
             commonoptstrs.add(res.obtainTypedArray(typedArray2.getResourceId(i, 0)));
         }
+        favoritemenu = new ArrayList<>();
+        /*favoritemenu.clear();
+        for(int i=2;i<10;i++) {
+            ArrayList<Integer> array = new ArrayList<Integer>();
+            array.add(i);
+            array.add(1);
+            favoritemenu.add(array);
+        }*/
+        readFileFavorite();
         instance=this;
     }
 
     public static MenuDict getInstance() {
         return instance;
     }
-    public static void createInstance(Resources res){
-        instance = new MenuDict(res);
+    public static void createInstance(Context context){
+        instance = new MenuDict(context);
     }
     /*public int commonoptlen(){
         return commonoptstr.length;
@@ -233,5 +258,76 @@ public class MenuDict{
         }
         return String.valueOf(value);
     }
+    public void setFavoriteMenu(int menugroupid, int menuid, boolean set){//favoriteに登録する
+        ArrayList array=new ArrayList();
+        array.add(menugroupid);
+        array.add(menuid);
+        if(checkFavoriteMenu(menugroupid,menuid)){
+            if(set){
+                //to do nothing
+            }else{
+                for(int i=0;i<favoritemenu.size();i++){
+                    if(favoritemenu.get(i).get(0)==menugroupid&&favoritemenu.get(i).get(1)==menuid){
+                        favoritemenu.remove(i);
+                        writeFileFavorite();
+                        break;
+                    }
+                }
+            }
+        }else{
+            if(set){
+                favoritemenu.add(array);
+                writeFileFavorite();
+            }else{
+                //to do nothing
+            }
+        }
+    }
+    public boolean checkFavoriteMenu(int menugroupid,int menuid){//favoriteに登録されているか確認する
+        for(int i=0;i<favoritemenu.size();i++){
+            if(favoritemenu.get(i).get(0)==menugroupid&&favoritemenu.get(i).get(1)==menuid){
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public ArrayList<Integer> getFavoritemenu(int menugroupid) {//menuidの配列を返す
+        return favoritemenu.get(menugroupid);
+    }
+    public ArrayList<ArrayList<Integer>> getFavoritemenu() {//[menugroupid,menuid]の配列を返す
+        return favoritemenu;
+    }
+    void setFavoriteChangeFlag(){
+        favoritechangeflag=true;
+    }
+    boolean getFavoriteChangeFlag(){
+        if(favoritechangeflag){
+            favoritechangeflag=false;
+            return true;
+        }
+        return false;
+    }
+    void readFileFavorite(){
+        try {
+            FileInputStream in = context.openFileInput("favmenu.dat");
+            ObjectInputStream ois = new ObjectInputStream(in);
+            favoritemenu = (ArrayList<ArrayList<Integer>>)ois.readObject();
+        }catch (IOException e){
+
+        }catch (ClassNotFoundException e){
+
+        }
+
+    }
+    void writeFileFavorite(){
+        try{
+            OutputStream out = context.openFileOutput("favmenu.dat",MODE_PRIVATE);
+            ObjectOutputStream oos= new ObjectOutputStream(out);
+            oos.writeObject(favoritemenu);
+            oos.close();
+        }catch (IOException e){
+
+        }
+    }
 }

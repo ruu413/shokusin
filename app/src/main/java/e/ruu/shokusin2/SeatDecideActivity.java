@@ -21,6 +21,7 @@ public class SeatDecideActivity extends AppCompatActivity {
         SetView.setActionbar(getApplication(),getSupportActionBar(),"座席選択");
         Intent intent=getIntent();
         orderDataHolder=(OrderDataHolder)intent.getSerializableExtra("orderdataholder");
+        if(orderDataHolder==null)finish();
         setButton();
         for(int i=0;i<buttons.size();i++){
             final int finalI=i;

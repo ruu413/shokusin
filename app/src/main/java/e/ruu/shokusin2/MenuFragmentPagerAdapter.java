@@ -6,12 +6,21 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class MenuFragmentPagerAdapter extends FragmentPagerAdapter {
+    Fragment favoriteFragment=null;
     public MenuFragmentPagerAdapter(FragmentManager fm){
         super(fm);
     }
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = new MenuFragment();
+        Fragment fragment;
+        fragment = new MenuFragment();
+        if(position==0){
+            if(favoriteFragment==null) {
+                favoriteFragment = new FavoriteMenuFragment();
+            }
+            fragment=favoriteFragment;
+        }
+        if(position==1)fragment= new AllMenuFragment();
         Bundle bundle=new Bundle();
         bundle.putInt("menugroupid",position);
         fragment.setArguments(bundle);
