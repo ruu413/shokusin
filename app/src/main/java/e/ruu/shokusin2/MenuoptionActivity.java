@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 
 public class
-MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//TODO menugroupidをどうにかする
+MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {
     public final ArrayList<ToggleButton> toggleButtons=new ArrayList<>();
     public ArrayList<Integer> buttonids=new ArrayList<>();
     ArrayList<LinearLayout> linearLayouts=new ArrayList<>();
@@ -72,13 +72,21 @@ MenuoptionActivity extends AppCompatActivity implements View.OnClickListener {//
         appbarlayout.addView(appbarbuttonlayout);
         TextView appbartextview=new TextView(context);
         ToggleButton favoritebutton=new ToggleButton(context);
+        favoritebutton.setText("");
+        favoritebutton.setTextOn("");
+        favoritebutton.setTextOff("");
+        favoritebutton.setBackgroundResource(R.drawable.favoritebutton);
+        favoritebutton.setLayoutParams(new LinearLayout.LayoutParams(
+                ConvertSize.dp_to_px(context,40),
+                ConvertSize.dp_to_px(context,40)
+        ));
         appbarstrlayout.addView(appbartextview);
         appbarbuttonlayout.addView(favoritebutton);
         appbarbuttonlayout.setLayoutParams(new LinearLayout.LayoutParams(
-                ConvertSize.dp_to_px(context,100),
+                ConvertSize.dp_to_px(context,70),
                 LinearLayout.LayoutParams.MATCH_PARENT));
         appbarstrlayout.setLayoutParams(new LinearLayout.LayoutParams(
-                ConvertSize.width_per_to_px(context,100)-ConvertSize.dp_to_px(context,100),
+                ConvertSize.width_per_to_px(context,100)-ConvertSize.dp_to_px(context,70),
                 LinearLayout.LayoutParams.MATCH_PARENT));
         appbartextview.setText(menustr+"のオプション選択");
         appbartextview.setTextColor(Color.WHITE);

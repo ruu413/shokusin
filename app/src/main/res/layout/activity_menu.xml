@@ -12,6 +12,7 @@
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/coordinatorlayout"
         android:layout_gravity="top">
 
 
@@ -49,11 +50,33 @@
             </Spinner>
             </LinearLayout>
         </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/searchAppBarLayout"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimarylite"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="top|center">
+            <android.support.v7.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/searchview"></android.support.v7.widget.SearchView>
+        </android.support.design.widget.AppBarLayout>
+    <!--<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/vpparent"></LinearLayout>-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
     <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp">

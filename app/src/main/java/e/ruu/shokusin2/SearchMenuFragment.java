@@ -7,18 +7,37 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class AllMenuFragment extends MenuFragment {
+public class SearchMenuFragment extends MenuFragment {
+    public String searchstr="";
+    public boolean setSearchString(String str){
+        searchstr=str;
+        return true;
+    }
+
     protected void setMenuButton(LinearLayout layout){
         //layout.removeAllViewsInLayout();
         ArrayList<MenuButton> buttons=new ArrayList<>();
         ArrayList<LinearLayout> innerlayouts=new ArrayList<>();
         int menugroupid=2;
+        ArrayList<String> sstr = new ArrayList<>(Arrays.asList(searchstr.split(" ")));
+        sstr.remove("");
+        sstr.remove(" ");
+        if(sstr.size()==0)return;
         for(menugroupid=2;menugroupid<menuDict.menugrouplen();++menugroupid) {
             for (int i = 0; i < menuDict.menulen(menugroupid); i++) {
+                int flag=1;
+                String menustr=menuDict.menustr(menugroupid, i);
+                for(int ii=0;ii<sstr.size();++ii) {
+                    if (! menustr.contains(sstr.get(ii))) {
+                        flag=0;
+                    }
+                }
+                if(flag==0)continue;
                 MenuButton button=new MenuButton((getContext()));
                 buttons.add(button);
-                button.setText(menuDict.menustr(menugroupid, i));
+                button.setText(menustr);
                 button.setValueText(menuDict.menuvaluestr(menugroupid, i) + "円");
 
                 //buttons.get(i).setText("a");
